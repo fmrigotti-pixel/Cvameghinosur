@@ -3,43 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Centro Vecinal Bº Ameghino Sur · 45 años organizando al barrio</title>
-<meta name="description" content="Centro Vecinal con 45 años de historia organizando el barrio Ameghino Sur de Córdoba. Personería Jurídica Nº 0120. Información, gestiones y participación vecinal.">
-
-<!-- Open Graph -->
-<meta property="og:title" content="Centro Vecinal Bº Ameghino Sur · 45 años organizando al barrio">
-<meta property="og:description" content="Información clara, gestión transparente y un canal real para hacer escuchar la voz del barrio. Personería Jurídica Municipal Nº 0120.">
+<title>Novedades · Centro Vecinal Bº Ameghino Sur</title>
+<meta name="description" content="Todas las novedades, gestiones y comunicados del Centro Vecinal Bº Ameghino Sur. Información barrial verificada y actualizada.">
+<meta property="og:title" content="Novedades · Centro Vecinal Bº Ameghino Sur">
+<meta property="og:description" content="Gestiones, comunidad, reclamos e historia de Ameghino Sur.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://cvameghinosur.com.ar/">
+<meta property="og:url" content="https://cvameghinosur.com.ar/novedades/">
 <meta property="og:image" content="https://cvameghinosur.com.ar/og-image.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:locale" content="es_AR">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://cvameghinosur.com.ar/og-image.png">
 
-<!-- Schema.org -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "CivicStructure",
-  "name": "Centro Vecinal Bº Ameghino Sur",
-  "description": "Institución barrial con 45 años de historia organizando a los vecinos de Ameghino Sur ante el Estado.",
-  "url": "https://cvameghinosur.com.ar",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Aconcagua 4078",
-    "addressLocality": "Córdoba",
-    "addressCountry": "AR"
-  },
-  "email": "cv.ameghinosur@gmail.com",
-  "foundingDate": "1981",
-  "areaServed": "Barrio Ameghino Sur, Córdoba, Argentina"
-}
-</script>
-
-<!-- Google Analytics GA4 -->
-<!-- INSTRUCCIÓN: reemplazá G-XXXXXXXXXX por tu ID de medición real de Google Analytics -->
+<!-- Google Analytics GA4 — mismo ID que en index.html -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -50,7 +22,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
   :root {
@@ -65,10 +37,8 @@
     --gris-medio: #5C6573;
     --gris-claro: #E2E8F0;
     --blanco: #FFFFFF;
-
     --display: 'Fraunces', Georgia, serif;
     --body: 'Inter', -apple-system, sans-serif;
-
     --max-w: 1240px;
   }
 
@@ -83,28 +53,7 @@
     overflow-x: hidden;
   }
 
-  /* Textura de papel sutil de fondo */
-  body::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    background-image:
-      radial-gradient(circle at 25% 25%, rgba(232, 160, 32, 0.025) 1px, transparent 1px),
-      radial-gradient(circle at 75% 75%, rgba(27, 58, 92, 0.02) 1px, transparent 1px);
-    background-size: 40px 40px, 60px 60px;
-    pointer-events: none;
-    z-index: 0;
-  }
-
-  .container {
-    max-width: var(--max-w);
-    margin: 0 auto;
-    padding: 0 24px;
-    position: relative;
-    z-index: 1;
-  }
-
-  /* === NAV === */
+  /* NAV */
   nav {
     position: sticky;
     top: 0;
@@ -163,305 +112,45 @@
     text-transform: uppercase;
     margin-top: 2px;
   }
-  .nav-links {
-    display: flex;
-    gap: 32px;
-    list-style: none;
-  }
-  .nav-links a {
-    color: var(--gris-texto);
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 500;
-    transition: color 0.2s;
-    position: relative;
-  }
-  .nav-links a:hover { color: var(--azul-profundo); }
-  .nav-links a::after {
-    content: '';
-    position: absolute;
-    bottom: -4px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: var(--dorado);
-    transition: width 0.3s;
-  }
-  .nav-links a:hover::after { width: 100%; }
-  .nav-cta {
-    background: var(--azul-profundo);
-    color: var(--blanco);
-    padding: 10px 20px;
-    border-radius: 999px;
+  .nav-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     font-size: 13px;
     font-weight: 600;
+    color: var(--azul-profundo);
     text-decoration: none;
-    transition: all 0.2s;
-    white-space: nowrap;
+    transition: color 0.2s;
   }
-  .nav-cta:hover {
-    background: var(--azul-oscuro);
-    transform: translateY(-1px);
-  }
+  .nav-back:hover { color: var(--dorado); }
+  .nav-back svg { width: 16px; height: 16px; fill: currentColor; }
 
-  @media (max-width: 768px) {
-    .nav-links { display: none; }
-  }
-
-  /* === HERO === */
-  .hero {
-    padding: 80px 0 100px;
+  /* HEADER DE PÁGINA */
+  .page-header {
+    background: var(--azul-profundo);
+    color: var(--blanco);
+    padding: 64px 0 72px;
     position: relative;
     overflow: hidden;
   }
-  .hero-grid {
-    display: grid;
-    grid-template-columns: 1.3fr 1fr;
-    gap: 60px;
-    align-items: center;
-  }
-  .hero-eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--dorado);
-    margin-bottom: 28px;
-    animation: fadeInUp 0.8s ease;
-  }
-  .hero-eyebrow::before {
-    content: '';
-    width: 32px;
-    height: 1px;
-    background: var(--dorado);
-  }
-  .hero h1 {
-    font-family: var(--display);
-    font-weight: 600;
-    font-size: clamp(40px, 6.5vw, 76px);
-    line-height: 0.98;
-    letter-spacing: -0.035em;
-    color: var(--azul-profundo);
-    margin-bottom: 28px;
-    animation: fadeInUp 0.8s ease 0.1s both;
-  }
-  .hero h1 em {
-    font-style: italic;
-    font-weight: 400;
-    color: var(--dorado);
-  }
-  .hero-lead {
-    font-size: 19px;
-    line-height: 1.55;
-    color: var(--gris-medio);
-    max-width: 520px;
-    margin-bottom: 40px;
-    animation: fadeInUp 0.8s ease 0.2s both;
-  }
-  .hero-cta-group {
-    display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
-    animation: fadeInUp 0.8s ease 0.3s both;
-  }
-  .btn-primary {
-    background: var(--azul-profundo);
-    color: var(--blanco);
-    padding: 18px 32px;
-    border-radius: 999px;
-    font-size: 15px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.25s;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    border: 2px solid var(--azul-profundo);
-  }
-  .btn-primary:hover {
-    background: var(--azul-oscuro);
-    border-color: var(--azul-oscuro);
-    transform: translateY(-2px);
-    box-shadow: 0 12px 24px rgba(27, 58, 92, 0.18);
-  }
-  .btn-primary svg { width: 18px; height: 18px; }
-  .btn-secondary {
-    background: transparent;
-    color: var(--azul-profundo);
-    padding: 18px 32px;
-    border-radius: 999px;
-    font-size: 15px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.25s;
-    border: 2px solid var(--azul-profundo);
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .btn-secondary:hover {
-    background: var(--azul-profundo);
-    color: var(--blanco);
-  }
-
-  /* Sello editorial del hero */
-  .hero-seal {
-    position: relative;
-    width: 100%;
-    max-width: 440px;
-    aspect-ratio: 1;
-    margin-left: auto;
-    animation: fadeIn 1.2s ease 0.4s both;
-  }
-  /* SVG circular text */
-  .seal-svg {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    animation: spin 90s linear infinite;
-  }
-  .seal-svg text {
-    font-family: var(--display);
-    font-size: 9.5px;
-    font-weight: 600;
-    letter-spacing: 4px;
-    fill: var(--azul-profundo);
-    text-transform: uppercase;
-  }
-  /* Emblema central */
-  .seal-emblem {
-    position: absolute;
-    inset: 14%;
-    border-radius: 50%;
-    background: linear-gradient(135deg, var(--azul-profundo) 0%, var(--azul-oscuro) 100%);
-    border: 3px solid var(--dorado);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 24px;
-    box-shadow:
-      0 30px 60px -15px rgba(27, 58, 92, 0.4),
-      0 0 0 1px rgba(232, 160, 32, 0.2),
-      inset 0 0 0 1px rgba(232, 160, 32, 0.15);
-  }
-  .seal-emblem-num {
-    font-family: var(--display);
-    font-weight: 600;
-    font-size: clamp(48px, 9vw, 84px);
-    line-height: 0.9;
-    color: var(--dorado);
-    letter-spacing: -0.04em;
-    margin-bottom: 4px;
-  }
-  .seal-emblem-num em {
-    font-style: italic;
-    font-weight: 400;
-  }
-  .seal-emblem-divider {
-    width: 36px;
-    height: 1px;
-    background: var(--dorado);
-    margin: 8px 0 10px;
-  }
-  .seal-emblem-label {
-    font-family: var(--body);
-    font-size: 10px;
-    font-weight: 600;
-    color: var(--blanco);
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    line-height: 1.4;
-  }
-  .seal-emblem-label em {
-    font-style: normal;
-    color: var(--dorado);
-    font-weight: 700;
-  }
-
-  @keyframes spin {
-    to { transform: rotate(360deg); }
-  }
-  @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-
-  @media (max-width: 900px) {
-    .hero { padding: 50px 0 70px; }
-    .hero-grid { grid-template-columns: 1fr; gap: 50px; }
-    .hero-seal { max-width: 280px; margin: 0 auto; }
-  }
-
-  /* === DATOS RÁPIDOS === */
-  .quickfacts {
-    background: var(--azul-profundo);
-    color: var(--blanco);
-    padding: 60px 0;
-    position: relative;
-    overflow: hidden;
-  }
-  .quickfacts::before {
+  .page-header::before {
     content: '';
     position: absolute;
-    top: -200px;
-    right: -200px;
+    top: -100px;
+    right: -100px;
     width: 500px;
     height: 500px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(232, 160, 32, 0.12) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(232, 160, 32, 0.1) 0%, transparent 65%);
+    pointer-events: none;
   }
-  .quickfacts-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
+  .page-header-inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 24px;
     position: relative;
   }
-  .qf-item .qf-num {
-    font-family: var(--display);
-    font-weight: 600;
-    font-size: clamp(40px, 5vw, 56px);
-    line-height: 1;
-    color: var(--dorado);
-    letter-spacing: -0.03em;
-    margin-bottom: 8px;
-  }
-  .qf-item .qf-num em {
-    font-style: italic;
-    font-weight: 400;
-  }
-  .qf-item .qf-label {
-    font-size: 13px;
-    line-height: 1.5;
-    color: rgba(255, 255, 255, 0.85);
-    max-width: 200px;
-  }
-
-  @media (max-width: 768px) {
-    .quickfacts-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
-  }
-
-  /* === SECCIÓN GENÉRICA === */
-  section.block { padding: 100px 0; }
-  .section-header {
-    margin-bottom: 64px;
-    max-width: 720px;
-  }
-  .section-header.center {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-  }
-  .section-eyebrow {
+  .page-eyebrow {
     display: inline-flex;
     align-items: center;
     gap: 12px;
@@ -472,215 +161,208 @@
     color: var(--dorado);
     margin-bottom: 20px;
   }
-  .section-eyebrow::before {
-    content: '';
-    width: 24px;
-    height: 1px;
-    background: var(--dorado);
-  }
-  .section-title {
+  .page-eyebrow::before { content: ''; width: 24px; height: 1px; background: var(--dorado); }
+  .page-title {
     font-family: var(--display);
     font-weight: 600;
-    font-size: clamp(32px, 4.5vw, 52px);
-    line-height: 1.05;
-    letter-spacing: -0.025em;
-    color: var(--azul-profundo);
-    margin-bottom: 20px;
+    font-size: clamp(36px, 5vw, 60px);
+    line-height: 1.0;
+    letter-spacing: -0.03em;
+    color: var(--blanco);
+    margin-bottom: 16px;
   }
-  .section-title em {
-    font-style: italic;
-    font-weight: 400;
-    color: var(--dorado);
-  }
-  .section-lead {
-    font-size: 18px;
+  .page-title em { font-style: italic; font-weight: 400; color: var(--dorado); }
+  .page-lead {
+    font-size: 17px;
     line-height: 1.6;
+    color: rgba(255,255,255,0.75);
+    max-width: 560px;
+  }
+
+  /* FILTROS */
+  .filtros-wrap {
+    background: var(--blanco);
+    border-bottom: 1px solid rgba(27, 58, 92, 0.08);
+    padding: 20px 0;
+    position: sticky;
+    top: 73px;
+    z-index: 90;
+  }
+  .filtros-inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .filtro-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gris-medio);
+    margin-right: 4px;
+    white-space: nowrap;
+  }
+  .filtro-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 14px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    border: 1.5px solid rgba(27, 58, 92, 0.15);
+    background: transparent;
+    color: var(--gris-medio);
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+  .filtro-btn:hover {
+    border-color: var(--azul-profundo);
+    color: var(--azul-profundo);
+  }
+  .filtro-btn.active {
+    background: var(--azul-profundo);
+    border-color: var(--azul-profundo);
+    color: var(--blanco);
+  }
+  .filtro-btn .filtro-count {
+    background: rgba(255,255,255,0.2);
+    border-radius: 999px;
+    padding: 1px 6px;
+    font-size: 10px;
+  }
+  .filtro-btn:not(.active) .filtro-count {
+    background: rgba(27, 58, 92, 0.08);
     color: var(--gris-medio);
   }
 
-  /* === QUIÉNES SOMOS === */
-  .about {
-    background: var(--blanco);
-    border-top: 1px solid rgba(27, 58, 92, 0.08);
-    border-bottom: 1px solid rgba(27, 58, 92, 0.08);
-  }
-  .about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 80px;
-    align-items: start;
-  }
-  .about-quote {
-    font-family: var(--display);
-    font-style: italic;
-    font-weight: 400;
-    font-size: clamp(22px, 2.4vw, 28px);
-    line-height: 1.35;
-    color: var(--azul-profundo);
-    border-left: 3px solid var(--dorado);
-    padding: 8px 0 8px 28px;
-  }
-  .about-text p {
-    margin-bottom: 20px;
-    font-size: 16px;
-    line-height: 1.7;
-    color: var(--gris-texto);
-  }
-  .about-text strong {
-    color: var(--azul-profundo);
-    font-weight: 600;
-  }
-  @media (max-width: 900px) {
-    .about-grid { grid-template-columns: 1fr; gap: 40px; }
+  /* LISTA DE NOVEDADES */
+  .novedades-wrap {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 56px 24px 100px;
   }
 
-  /* === LÍNEA DEL TIEMPO === */
-  .timeline {
-    background: var(--crema);
-    padding: 100px 0;
-  }
-  .timeline-track {
+  /* Nota destacada (la más reciente — ocupa ancho completo) */
+  .novedad-destacada {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 8px;
-    position: relative;
-    margin-top: 48px;
-  }
-  .timeline-track::before {
-    content: '';
-    position: absolute;
-    top: 22px;
-    left: 5%;
-    right: 5%;
-    height: 2px;
-    background: linear-gradient(90deg,
-      transparent 0%,
-      var(--dorado) 10%,
-      var(--dorado) 90%,
-      transparent 100%);
-  }
-  .tl-item {
-    text-align: center;
-    position: relative;
-  }
-  .tl-dot {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
     background: var(--blanco);
-    border: 3px solid var(--dorado);
+    border: 1px solid rgba(27, 58, 92, 0.08);
+    border-radius: 4px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    margin-bottom: 28px;
+    transition: all 0.3s;
+    position: relative;
+  }
+  .novedad-destacada:hover {
+    box-shadow: 0 20px 48px -16px rgba(27, 58, 92, 0.14);
+    transform: translateY(-3px);
+  }
+  .novedad-destacada-badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: var(--dorado);
+    color: var(--azul-oscuro);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 999px;
+    z-index: 2;
+  }
+  .novedad-destacada-visual {
+    background: linear-gradient(135deg, var(--azul-profundo) 0%, var(--azul-oscuro) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 40px;
+    min-height: 280px;
+  }
+  .novedad-destacada-visual-inner {
+    text-align: center;
+  }
+  .novedad-destacada-pilar-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: rgba(232, 160, 32, 0.15);
+    border: 1px solid rgba(232, 160, 32, 0.3);
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto 16px;
-    position: relative;
-    z-index: 1;
-    font-family: var(--display);
+  }
+  .novedad-destacada-pilar-icon svg { width: 28px; height: 28px; fill: var(--dorado); }
+  .novedad-destacada-pilar-label {
+    font-size: 11px;
     font-weight: 700;
-    font-size: 14px;
-    color: var(--azul-profundo);
-    transition: all 0.3s;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
   }
-  .tl-item:hover .tl-dot {
-    background: var(--dorado);
-    color: var(--blanco);
-    transform: scale(1.1);
+  .novedad-destacada-content {
+    padding: 48px 44px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
   }
-  .tl-year {
-    font-family: var(--display);
+  .novedad-destacada-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .nd-pilar {
+    font-size: 10px;
     font-weight: 700;
-    font-size: 22px;
-    color: var(--azul-profundo);
-    margin-bottom: 8px;
-  }
-  .tl-text {
-    font-size: 13px;
-    line-height: 1.5;
-    color: var(--gris-medio);
-    max-width: 180px;
-    margin: 0 auto;
-  }
-  @media (max-width: 768px) {
-    .timeline-track { grid-template-columns: 1fr; gap: 24px; }
-    .timeline-track::before { display: none; }
-    .tl-item { display: flex; align-items: center; gap: 16px; text-align: left; }
-    .tl-dot { margin: 0; flex-shrink: 0; }
-    .tl-text { max-width: none; }
-  }
-
-  /* === GESTIONES === */
-  .work {
-    background: var(--blanco);
-    border-top: 1px solid rgba(27, 58, 92, 0.08);
-    border-bottom: 1px solid rgba(27, 58, 92, 0.08);
-  }
-  .work-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
-  }
-  .work-card {
-    background: var(--crema);
-    border: 1px solid rgba(27, 58, 92, 0.06);
-    border-radius: 4px;
-    padding: 36px 32px;
-    transition: all 0.3s;
-    position: relative;
-    overflow: hidden;
-  }
-  .work-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 4px;
-    height: 0;
-    background: var(--dorado);
-    transition: height 0.4s;
-  }
-  .work-card:hover {
-    transform: translateY(-4px);
-    border-color: rgba(232, 160, 32, 0.4);
-    box-shadow: 0 20px 40px -12px rgba(27, 58, 92, 0.12);
-  }
-  .work-card:hover::before { height: 100%; }
-  .work-num {
-    font-family: var(--display);
-    font-weight: 700;
-    font-size: 14px;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
     color: var(--dorado);
-    margin-bottom: 16px;
   }
-  .work-title {
+  .nd-fecha {
+    font-size: 12px;
+    color: var(--gris-medio);
+    font-weight: 500;
+  }
+  .novedad-destacada h2 {
     font-family: var(--display);
     font-weight: 600;
-    font-size: 24px;
-    line-height: 1.2;
+    font-size: clamp(22px, 2.5vw, 30px);
+    line-height: 1.15;
     color: var(--azul-profundo);
-    margin-bottom: 14px;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
   }
-  .work-desc {
+  .novedad-destacada p {
     font-size: 15px;
-    line-height: 1.6;
+    line-height: 1.65;
     color: var(--gris-medio);
-    margin-bottom: 20px;
   }
-  .work-status {
+  .nd-estado {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    font-size: 12px;
+    gap: 6px;
+    font-size: 11px;
     font-weight: 600;
     color: var(--azul-profundo);
     text-transform: uppercase;
     letter-spacing: 0.08em;
   }
-  .work-status::before {
+  .nd-estado::before {
     content: '';
-    width: 8px;
-    height: 8px;
+    width: 6px;
+    height: 6px;
     border-radius: 50%;
     background: var(--dorado);
     animation: pulse 2s ease-in-out infinite;
@@ -689,1399 +371,424 @@
     0%, 100% { opacity: 1; transform: scale(1); }
     50% { opacity: 0.6; transform: scale(0.85); }
   }
-  @media (max-width: 900px) {
-    .work-grid { grid-template-columns: 1fr; }
-  }
-
-  /* === BANNER WHATSAPP === */
-  .wa-banner {
-    background: var(--azul-profundo);
-    color: var(--blanco);
-    padding: 80px 0;
-    position: relative;
-    overflow: hidden;
-  }
-  .wa-banner::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 800px;
-    height: 800px;
-    background: radial-gradient(circle, rgba(232, 160, 32, 0.08) 0%, transparent 60%);
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-  }
-  .wa-inner {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 40px;
-    align-items: center;
-    position: relative;
-  }
-  .wa-text h3 {
-    font-family: var(--display);
-    font-weight: 600;
-    font-size: clamp(28px, 4vw, 42px);
-    line-height: 1.1;
-    letter-spacing: -0.02em;
-    margin-bottom: 12px;
-  }
-  .wa-text h3 em {
-    font-style: italic;
-    color: var(--dorado);
-    font-weight: 400;
-  }
-  .wa-text p {
-    font-size: 17px;
-    color: rgba(255, 255, 255, 0.85);
-    max-width: 600px;
-    line-height: 1.6;
-  }
-  .wa-cta {
-    background: var(--dorado);
-    color: var(--azul-oscuro);
-    padding: 20px 36px;
-    border-radius: 999px;
-    font-size: 16px;
-    font-weight: 700;
-    text-decoration: none;
-    transition: all 0.25s;
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    white-space: nowrap;
-    box-shadow: 0 12px 28px -8px rgba(232, 160, 32, 0.5);
-  }
-  .wa-cta:hover {
-    background: var(--dorado-claro);
-    transform: translateY(-2px);
-    box-shadow: 0 16px 36px -8px rgba(232, 160, 32, 0.6);
-  }
-  .wa-cta svg { width: 22px; height: 22px; }
-  @media (max-width: 768px) {
-    .wa-inner { grid-template-columns: 1fr; text-align: left; }
-  }
-
-  /* === AUTORIDADES === */
-  .auth {
-    background: var(--crema);
-  }
-  .auth-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: 80px;
-    align-items: start;
-  }
-  .auth-list {
-    background: var(--blanco);
-    border: 1px solid rgba(27, 58, 92, 0.08);
-    border-radius: 4px;
-    overflow: hidden;
-  }
-  .auth-row {
-    display: grid;
-    grid-template-columns: 170px 1fr;
-    gap: 16px;
-    padding: 18px 28px;
-    border-bottom: 1px solid rgba(27, 58, 92, 0.06);
-    align-items: center;
-  }
-  .auth-row:last-child { border-bottom: 0; }
-  .auth-role {
-    font-family: var(--display);
-    font-weight: 600;
-    font-size: 13px;
-    color: var(--dorado);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-  }
-  .auth-name {
-    font-size: 15px;
-    font-weight: 500;
-    color: var(--gris-texto);
-  }
-  .auth-meta {
-    margin-top: 32px;
-    padding: 24px;
-    background: rgba(27, 58, 92, 0.04);
-    border-left: 3px solid var(--dorado);
-    font-size: 13px;
-    line-height: 1.7;
-    color: var(--gris-medio);
-  }
-  .auth-meta strong { color: var(--azul-profundo); }
-  @media (max-width: 900px) {
-    .auth-grid { grid-template-columns: 1fr; gap: 48px; }
-    .auth-row { grid-template-columns: 1fr; gap: 4px; padding: 16px 20px; }
-  }
-
-  /* === PARTICIPAR === */
-  .join {
-    background: var(--azul-profundo);
-    color: var(--blanco);
-    border-top: 1px solid rgba(232, 160, 32, 0.2);
-    border-bottom: 1px solid rgba(232, 160, 32, 0.2);
-  }
-  .join .section-title { color: var(--blanco); }
-  .join .section-title em { color: var(--dorado); }
-  .join .section-eyebrow { color: var(--dorado); }
-  .join-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-  }
-  .join-card {
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 4px;
-    padding: 36px 32px;
-    transition: all 0.3s;
-    text-decoration: none;
-    color: var(--blanco);
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    position: relative;
-    z-index: 2;
-  }
-  .join-card:hover {
-    background: rgba(232, 160, 32, 0.08);
-    border-color: var(--dorado);
-    transform: translateY(-4px);
-  }
-  .join-icon {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    background: var(--dorado);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .join-icon svg { width: 22px; height: 22px; fill: var(--azul-oscuro); }
-  .join-card h4 {
-    font-family: var(--display);
-    font-weight: 600;
-    font-size: 22px;
-    color: var(--blanco);
-    letter-spacing: -0.01em;
-  }
-  .join-card p {
-    font-size: 14px;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.75);
-    flex-grow: 1;
-  }
-  .join-arrow {
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--dorado);
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    transition: gap 0.2s;
-  }
-  .join-card:hover .join-arrow { gap: 12px; }
-  @media (max-width: 900px) {
-    .join-grid { grid-template-columns: 1fr; }
-  }
-
-  /* === FOOTER === */
-  footer {
-    background: var(--azul-oscuro);
-    color: rgba(255, 255, 255, 0.8);
-    padding: 80px 0 32px;
-  }
-  .footer-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    gap: 60px;
-    margin-bottom: 60px;
-  }
-  .footer-brand {
-    font-family: var(--display);
-    font-weight: 600;
-    font-size: 24px;
-    color: var(--blanco);
-    margin-bottom: 12px;
-    letter-spacing: -0.01em;
-  }
-  .footer-tag {
-    font-size: 13px;
-    line-height: 1.6;
-    margin-bottom: 24px;
-    max-width: 380px;
-  }
-  .footer-lema {
-    font-size: 11px;
-    letter-spacing: 0.16em;
-    color: var(--dorado);
-    text-transform: uppercase;
-    font-weight: 600;
-  }
-  .footer-col h5 {
-    font-family: var(--display);
-    font-weight: 600;
-    font-size: 13px;
-    color: var(--dorado);
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    margin-bottom: 20px;
-  }
-  .footer-col ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  .footer-col a {
-    color: rgba(255, 255, 255, 0.75);
-    text-decoration: none;
-    font-size: 14px;
-    transition: color 0.2s;
-  }
-  .footer-col a:hover { color: var(--dorado); }
-  .footer-col p {
-    font-size: 13px;
-    line-height: 1.7;
-    color: rgba(255, 255, 255, 0.7);
-  }
-  .footer-bottom {
-    padding-top: 32px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 16px;
-    font-size: 12px;
-    color: rgba(255, 255, 255, 0.55);
-  }
-  @media (max-width: 768px) {
-    .footer-grid { grid-template-columns: 1fr; gap: 40px; }
-  }
-
-  /* === NOVEDADES === */
-  .novedades {
-    background: var(--crema);
-    padding: 100px 0;
-    border-bottom: 1px solid rgba(27, 58, 92, 0.08);
-  }
-  .novedades-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
-    margin-top: 48px;
-  }
-  .novedad-card.novedad-card--pendiente {
-    opacity: 0.72;
-    cursor: default;
-    pointer-events: none;
-  }
-  .novedad-card.novedad-card--pendiente:hover {
-    transform: none;
-    box-shadow: none;
-  }
-  .novedad-card.novedad-card--pendiente::after { display: none; }
-  .novedad-proximamente {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 11px;
-    font-weight: 600;
-    color: var(--gris-medio);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    margin-top: 4px;
-    font-style: italic;
-  }
-  .novedad-proximamente::before {
-    content: '';
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--gris-claro);
-    flex-shrink: 0;
-  }
-  .ver-todas-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
+  .nd-leer {
     font-size: 13px;
     font-weight: 700;
     color: var(--azul-profundo);
-    text-decoration: none;
-    white-space: nowrap;
-    padding-bottom: 4px;
-    border-bottom: 2px solid var(--dorado);
-    transition: color 0.2s;
-    align-self: flex-end;
-    margin-bottom: 6px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    transition: gap 0.2s;
   }
-  .ver-todas-link:hover { color: var(--dorado); }
-  @media (max-width: 600px) {
-    .ver-todas-link { align-self: flex-start; }
+  .novedad-destacada:hover .nd-leer { gap: 10px; }
+
+  /* Grid de notas secundarias */
+  .novedades-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
   }
 
+  /* Card estándar */
   a.novedad-card {
     text-decoration: none;
     color: inherit;
-  }
-  .novedad-card {
+    display: flex;
+    flex-direction: column;
     background: var(--blanco);
     border: 1px solid rgba(27, 58, 92, 0.08);
     border-radius: 4px;
-    padding: 32px 28px;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
+    padding: 28px 24px;
+    gap: 12px;
     transition: all 0.3s;
     position: relative;
     overflow: hidden;
-    cursor: pointer;
   }
-  .novedad-card::after {
+  a.novedad-card::after {
     content: '';
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    bottom: 0; left: 0; right: 0;
     height: 3px;
     background: var(--dorado);
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.3s;
   }
-  .novedad-card:hover { box-shadow: 0 16px 40px -12px rgba(27, 58, 92, 0.12); transform: translateY(-3px); }
-  .novedad-card:hover::after { transform: scaleX(1); }
-  .novedad-card:hover .novedad-leer { gap: 10px; }
-  .novedad-pilar {
+  a.novedad-card:hover {
+    box-shadow: 0 12px 32px -10px rgba(27, 58, 92, 0.12);
+    transform: translateY(-3px);
+  }
+  a.novedad-card:hover::after { transform: scaleX(1); }
+  a.novedad-card:hover .card-leer { gap: 10px; }
+
+  .card-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .card-pilar {
     font-size: 10px;
     font-weight: 700;
-    letter-spacing: 0.18em;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
     color: var(--dorado);
   }
-  .novedad-fecha {
-    font-size: 12px;
+  .card-fecha {
+    font-size: 11px;
     color: var(--gris-medio);
     font-weight: 500;
+    white-space: nowrap;
   }
-  .novedad-titulo {
+  .card-titulo {
     font-family: var(--display);
     font-weight: 600;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.2;
     color: var(--azul-profundo);
     letter-spacing: -0.01em;
   }
-  .novedad-texto {
-    font-size: 14px;
-    line-height: 1.65;
+  .card-texto {
+    font-size: 13px;
+    line-height: 1.6;
     color: var(--gris-medio);
     flex-grow: 1;
   }
-  .novedad-tag {
+  .card-estado {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    font-size: 11px;
-    font-weight: 600;
+    gap: 5px;
+    font-size: 10px;
+    font-weight: 700;
     color: var(--azul-profundo);
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    margin-top: 4px;
   }
-  .novedad-tag::before {
+  .card-estado::before {
     content: '';
-    width: 6px;
-    height: 6px;
+    width: 5px;
+    height: 5px;
     border-radius: 50%;
     background: var(--dorado);
+    flex-shrink: 0;
   }
-  .novedad-leer {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 12px;
+  .card-leer {
+    font-size: 11px;
     font-weight: 700;
     color: var(--azul-profundo);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin-top: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 4px;
     transition: gap 0.2s;
   }
-  @media (max-width: 900px) {
-    .novedades-grid { grid-template-columns: 1fr; }
-  }
-  @media (max-width: 600px) {
-    .novedades { padding: 64px 0; }
-  }
 
-  /* === ENCUESTAS === */
-  .encuestas {
-    background: var(--crema);
-    padding: 100px 0;
-    border-top: 1px solid rgba(27, 58, 92, 0.08);
-  }
-  .encuestas-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 28px;
-    margin-top: 48px;
-  }
-  .encuesta-card {
-    background: var(--blanco);
-    border: 1px solid rgba(27, 58, 92, 0.08);
-    border-radius: 4px;
-    padding: 44px 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    position: relative;
-    z-index: 2;
-    overflow: hidden;
-    transition: all 0.3s;
-  }
-  .encuesta-card:hover {
-    box-shadow: 0 20px 48px -16px rgba(27, 58, 92, 0.14);
-    transform: translateY(-3px);
-  }
-  .encuesta-card--reclamos {
-    border-top: 4px solid var(--azul-profundo);
-  }
-  .encuesta-card--emprendimientos {
-    border-top: 4px solid var(--dorado);
-  }
-  .encuesta-icono {
-    width: 52px;
-    height: 52px;
-    border-radius: 12px;
+  /* Separador de año */
+  .year-divider {
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
+    gap: 20px;
+    margin: 48px 0 28px;
   }
-  .encuesta-icono--azul { background: rgba(27, 58, 92, 0.08); }
-  .encuesta-icono--dorado { background: rgba(232, 160, 32, 0.1); }
-  .encuesta-icono svg { width: 24px; height: 24px; }
-  .encuesta-icono--azul svg { fill: var(--azul-profundo); }
-  .encuesta-icono--dorado svg { fill: var(--dorado); }
-  .encuesta-tag {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-  }
-  .encuesta-tag--azul { color: var(--azul-profundo); }
-  .encuesta-tag--dorado { color: var(--dorado); }
-  .encuesta-titulo {
-    font-family: var(--display);
-    font-weight: 600;
-    font-size: clamp(20px, 2.2vw, 26px);
-    line-height: 1.2;
-    color: var(--azul-profundo);
-    letter-spacing: -0.01em;
-  }
-  .encuesta-desc {
-    font-size: 15px;
-    line-height: 1.65;
-    color: var(--gris-medio);
+  .year-divider-line {
     flex-grow: 1;
+    height: 1px;
+    background: rgba(27, 58, 92, 0.1);
   }
-  .encuesta-items {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin-bottom: 4px;
-  }
-  .encuesta-items li {
+  .year-divider-label {
+    font-family: var(--display);
+    font-weight: 700;
     font-size: 13px;
     color: var(--gris-medio);
-    padding-left: 16px;
-    position: relative;
-    line-height: 1.5;
-  }
-  .encuesta-items li::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 7px;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--dorado);
-    flex-shrink: 0;
-  }
-  .encuesta-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 14px 24px;
-    border-radius: 999px;
-    font-size: 14px;
-    font-weight: 700;
-    text-decoration: none;
-    transition: all 0.25s;
-    align-self: flex-start;
-    position: relative;
-    z-index: 2;
-  }
-  .encuesta-btn--azul {
-    background: var(--azul-profundo);
-    color: var(--blanco);
-    box-shadow: 0 8px 20px -6px rgba(27, 58, 92, 0.35);
-  }
-  .encuesta-btn--azul:hover {
-    background: var(--azul-oscuro);
-    transform: translateY(-2px);
-    box-shadow: 0 12px 28px -6px rgba(27, 58, 92, 0.45);
-  }
-  .encuesta-btn--dorado {
-    background: var(--dorado);
-    color: var(--azul-oscuro);
-    box-shadow: 0 8px 20px -6px rgba(232, 160, 32, 0.4);
-  }
-  .encuesta-btn--dorado:hover {
-    background: var(--dorado-claro);
-    transform: translateY(-2px);
-    box-shadow: 0 12px 28px -6px rgba(232, 160, 32, 0.5);
-  }
-  .encuesta-nota {
-    font-size: 11px;
-    color: var(--gris-medio);
-    margin-top: -8px;
-  }
-  @media (max-width: 768px) {
-    .encuestas-grid { grid-template-columns: 1fr; }
-    .encuesta-card { padding: 32px 28px; }
-    .encuestas { padding: 64px 0; }
+    letter-spacing: 0.08em;
+    white-space: nowrap;
   }
 
-  /* === PRÓXIMA ASAMBLEA === */
-  .asamblea {
-    background: var(--azul-profundo);
-    color: var(--blanco);
-    padding: 80px 0;
-    position: relative;
-    overflow: hidden;
+  /* Estado vacío */
+  .archivo-vacio {
+    text-align: center;
+    padding: 80px 24px;
+    color: var(--gris-medio);
   }
-  .asamblea::before {
-    content: '';
-    position: absolute;
-    bottom: -120px;
-    left: -120px;
-    width: 400px;
-    height: 400px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(232, 160, 32, 0.1) 0%, transparent 70%);
-    pointer-events: none;
-  }
-  .asamblea-inner {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    align-items: center;
-    position: relative;
-  }
-  .asamblea-eyebrow {
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--dorado);
-    margin-bottom: 16px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-  .asamblea-eyebrow::before { content: ''; width: 24px; height: 1px; background: var(--dorado); }
-  .asamblea h2 {
-    font-family: var(--display);
-    font-weight: 600;
-    font-size: clamp(28px, 3.5vw, 44px);
-    line-height: 1.1;
-    letter-spacing: -0.025em;
-    margin-bottom: 16px;
-  }
-  .asamblea h2 em { font-style: italic; color: var(--dorado); font-weight: 400; }
-  .asamblea-lead {
+  .archivo-vacio p {
     font-size: 16px;
     line-height: 1.6;
-    color: rgba(255,255,255,0.8);
-    max-width: 480px;
-  }
-  /* Cuando hay fecha confirmada */
-  .asamblea-card {
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(232, 160, 32, 0.3);
-    border-radius: 4px;
-    padding: 40px 36px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  .asamblea-dato {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-  }
-  .asamblea-dato-label {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--dorado);
-  }
-  .asamblea-dato-valor {
-    font-family: var(--display);
-    font-size: 20px;
-    font-weight: 600;
-    color: var(--blanco);
-    letter-spacing: -0.01em;
-  }
-  .asamblea-divider {
-    width: 100%;
-    height: 1px;
-    background: rgba(255,255,255,0.1);
-  }
-  .asamblea-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background: var(--dorado);
-    color: var(--azul-oscuro);
-    padding: 16px 28px;
-    border-radius: 999px;
-    font-size: 14px;
-    font-weight: 700;
-    text-decoration: none;
-    transition: all 0.25s;
-    align-self: center;
-    box-shadow: 0 8px 20px -6px rgba(232, 160, 32, 0.5);
-  }
-  .asamblea-btn:hover {
-    background: var(--dorado-claro);
-    transform: translateY(-2px);
-    box-shadow: 0 12px 28px -6px rgba(232, 160, 32, 0.6);
-  }
-  /* Cuando NO hay fecha (modo pendiente) */
-  .asamblea-pendiente {
-    background: rgba(255,255,255,0.04);
-    border: 1px dashed rgba(232, 160, 32, 0.3);
-    border-radius: 4px;
-    padding: 40px 36px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-  }
-  .asamblea-pendiente-icon {
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    background: rgba(232, 160, 32, 0.12);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .asamblea-pendiente-icon svg { width: 24px; height: 24px; fill: var(--dorado); }
-  .asamblea-pendiente p {
-    font-size: 15px;
-    color: rgba(255,255,255,0.7);
-    line-height: 1.5;
-    max-width: 280px;
-  }
-  .asamblea-pendiente strong { color: var(--blanco); }
-  @media (max-width: 900px) {
-    .asamblea-inner { grid-template-columns: 1fr; gap: 48px; }
-  }
-  @media (max-width: 600px) {
-    .asamblea { padding: 64px 0; }
-    .asamblea-card { padding: 28px 24px; }
-    .asamblea-pendiente { padding: 32px 24px; }
+    max-width: 400px;
+    margin: 0 auto;
   }
 
-  /* === CONTACTO + MAPA === */
-  .contacto {
-    background: var(--blanco);
-    border-top: 1px solid rgba(27, 58, 92, 0.08);
-    padding: 100px 0;
+  /* FOOTER */
+  footer {
+    background: var(--azul-oscuro);
+    color: rgba(255,255,255,0.7);
+    padding: 32px 0;
   }
-  .contacto-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.4fr;
-    gap: 80px;
-    align-items: start;
-    margin-top: 64px;
-  }
-  .contacto-item {
+  .footer-mini {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 24px;
     display: flex;
-    flex-direction: column;
-    gap: 32px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.55);
   }
-  .contacto-bloque {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-  .contacto-bloque-label {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--dorado);
-  }
-  .contacto-bloque-valor {
-    font-size: 16px;
-    color: var(--gris-texto);
-    line-height: 1.5;
-  }
-  .contacto-bloque-valor a {
-    color: var(--azul-profundo);
+  .footer-mini a {
+    color: rgba(255,255,255,0.7);
     text-decoration: none;
-    font-weight: 500;
     transition: color 0.2s;
   }
-  .contacto-bloque-valor a:hover { color: var(--dorado); }
-  .contacto-wa-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background: #25D366;
-    color: var(--blanco);
-    padding: 14px 24px;
-    border-radius: 999px;
-    font-size: 14px;
-    font-weight: 700;
-    text-decoration: none;
-    transition: all 0.25s;
-    align-self: flex-start;
-    box-shadow: 0 8px 20px -6px rgba(37, 211, 102, 0.4);
-  }
-  .contacto-wa-btn:hover {
-    background: #1ebe5d;
-    transform: translateY(-2px);
-    box-shadow: 0 12px 28px -6px rgba(37, 211, 102, 0.5);
-  }
-  .contacto-wa-btn svg { width: 18px; height: 18px; fill: var(--blanco); }
-  .contacto-nota {
-    font-size: 12px;
-    color: var(--gris-medio);
-    margin-top: 4px;
-  }
-  .mapa-wrapper {
-    border-radius: 4px;
-    overflow: hidden;
-    border: 1px solid rgba(27, 58, 92, 0.1);
-    box-shadow: 0 20px 60px -20px rgba(27, 58, 92, 0.12);
-  }
-  .mapa-wrapper iframe {
-    width: 100%;
-    height: 380px;
-    display: block;
-    border: 0;
-  }
-  .mapa-caption {
-    background: var(--crema);
-    padding: 16px 20px;
-    font-size: 13px;
-    color: var(--gris-medio);
-    border-top: 1px solid rgba(27, 58, 92, 0.06);
-  }
-  .mapa-caption strong { color: var(--azul-profundo); }
+  .footer-mini a:hover { color: var(--dorado); }
+
+  /* RESPONSIVO */
   @media (max-width: 900px) {
-    .contacto-grid { grid-template-columns: 1fr; gap: 48px; }
+    .novedad-destacada { grid-template-columns: 1fr; }
+    .novedad-destacada-visual { min-height: 160px; padding: 40px; }
+    .novedad-destacada-content { padding: 32px 28px; }
+    .novedades-grid { grid-template-columns: repeat(2, 1fr); }
   }
   @media (max-width: 600px) {
-    .contacto { padding: 64px 0; }
-    .mapa-wrapper iframe { height: 280px; }
-    .contacto-wa-btn { width: 100%; justify-content: center; }
+    .page-header { padding: 48px 0 56px; }
+    .filtros-wrap { top: 65px; }
+    .filtros-inner { gap: 8px; }
+    .filtro-label { display: none; }
+    .novedades-wrap { padding: 40px 20px 80px; }
+    .novedades-grid { grid-template-columns: 1fr; }
+    .novedad-destacada-content { padding: 28px 24px; }
   }
-
-  /* Ajuste jerarquía join-card: primera card destacada */
-  .join-card.join-card--primary {
-    background: rgba(232, 160, 32, 0.1);
-    border-color: rgba(232, 160, 32, 0.35);
-  }
-  .join-card.join-card--primary h4 { color: var(--dorado); }
-
 </style>
 </head>
 <body>
 
-<!-- ===== NAV ===== -->
+<!-- NAV -->
 <nav>
   <div class="nav-inner">
-    <a href="#" class="logo-mark" aria-label="Centro Vecinal Bº Ameghino Sur">
+    <a href="/index.html" class="logo-mark" aria-label="Centro Vecinal Bº Ameghino Sur — Inicio">
       <div class="logo-circle">CV</div>
       <div class="logo-text">
         Centro Vecinal
         <small>Bº Ameghino Sur</small>
       </div>
     </a>
-    <ul class="nav-links">
-      <li><a href="#novedades">Novedades</a></li>
-      <li><a href="#nosotros">Nosotros</a></li>
-      <li><a href="#gestiones">Gestiones</a></li>
-      <li><a href="#autoridades">Institucional</a></li>
-      <li><a href="#participar">Participar</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-    </ul>
-    <a href="#whatsapp" class="nav-cta">Sumate al canal</a>
+    <a href="/index.html" class="nav-back">
+      <svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+      Volver al inicio
+    </a>
   </div>
 </nav>
 
-<!-- ===== HERO ===== -->
-<header class="hero">
-  <div class="container">
-    <div class="hero-grid">
-      <div class="hero-content">
-        <div class="hero-eyebrow">Personería Jurídica Municipal Nº 0120</div>
-        <h1>45 años<br>organizando<br><em>nuestro barrio.</em></h1>
-        <p class="hero-lead">Información clara, gestión transparente y un canal real para hacer escuchar la voz de Ameghino Sur ante el Estado y las instituciones que toman decisiones sobre el barrio.</p>
-        <div class="hero-cta-group">
-          <a href="#whatsapp" class="btn-primary">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M17.498 14.382c-.301-.15-1.767-.867-2.04-.966-.273-.101-.473-.15-.673.15-.197.295-.771.964-.944 1.162-.175.195-.349.21-.646.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.77-1.66-2.07-.174-.3-.019-.465.13-.615.136-.135.301-.345.451-.523.146-.181.194-.301.297-.496.1-.21.049-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172-.015-.371-.015-.571-.015-.2 0-.523.074-.797.359-.273.3-1.045 1.02-1.045 2.475s1.07 2.865 1.219 3.075c.149.195 2.105 3.195 5.1 4.485.714.3 1.27.48 1.704.629.714.227 1.365.195 1.88.121.574-.091 1.767-.721 2.016-1.426.255-.705.255-1.29.18-1.425-.074-.135-.27-.21-.57-.345m-5.446 7.443h-.016c-1.77 0-3.524-.48-5.055-1.38l-.36-.214-3.75.975 1.005-3.645-.239-.375c-.99-1.576-1.516-3.391-1.516-5.26 0-5.445 4.455-9.885 9.942-9.885 2.654 0 5.145 1.035 7.021 2.91 1.875 1.859 2.909 4.35 2.909 6.99-.004 5.444-4.46 9.885-9.935 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652c1.746.943 3.71 1.444 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411"/>
-            </svg>
-            Sumate al canal de WhatsApp
-          </a>
-          <a href="#nosotros" class="btn-secondary">Conocé al Centro Vecinal</a>
-        </div>
-      </div>
-
-      <!-- Sello editorial -->
-      <div class="hero-seal">
-        <svg class="seal-svg" viewBox="0 0 200 200" aria-hidden="true">
-          <defs>
-            <path id="circle-top" d="M 100, 100 m -88, 0 a 88,88 0 1,1 176,0 a 88,88 0 1,1 -176,0" />
-          </defs>
-          <text>
-            <textPath href="#circle-top" startOffset="0">CENTRO VECINAL · Bº AMEGHINO SUR · CÓRDOBA · 1981 · </textPath>
-          </text>
-        </svg>
-        <div class="seal-emblem">
-          <div class="seal-emblem-num">45<em>.</em></div>
-          <div class="seal-emblem-divider"></div>
-          <div class="seal-emblem-label">Años organizando<br><em>nuestro barrio</em></div>
-        </div>
-      </div>
-    </div>
+<!-- HEADER -->
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Centro Vecinal Bº Ameghino Sur</div>
+    <h1 class="page-title">Todas las <em>novedades.</em></h1>
+    <p class="page-lead">Gestiones, comunicados y noticias del barrio. Publicamos cuando hay algo concreto para informar.</p>
   </div>
-</header>
+</div>
 
-<!-- ===== DATOS RÁPIDOS ===== -->
-<section class="quickfacts">
-  <div class="container">
-    <div class="quickfacts-grid">
-      <div class="qf-item">
-        <div class="qf-num">45</div>
-        <div class="qf-label">Años de organización vecinal en Ameghino Sur</div>
-      </div>
-      <div class="qf-item">
-        <div class="qf-num"><em>~</em>3.000</div>
-        <div class="qf-label">Vecinos viven en el barrio</div>
-      </div>
-      <div class="qf-item">
-        <div class="qf-num">40</div>
-        <div class="qf-label">Manzanas dentro del polígono oficial</div>
-      </div>
-      <div class="qf-item">
-        <div class="qf-num">1981</div>
-        <div class="qf-label">Año de la primera comisión vecinal</div>
-      </div>
-    </div>
+<!-- FILTROS -->
+<div class="filtros-wrap" id="filtros">
+  <div class="filtros-inner">
+    <span class="filtro-label">Filtrar:</span>
+    <button class="filtro-btn active" data-filtro="todos" onclick="filtrar(this)">
+      Todas <span class="filtro-count" id="count-todos">3</span>
+    </button>
+    <button class="filtro-btn" data-filtro="gestion" onclick="filtrar(this)">
+      Gestión <span class="filtro-count" id="count-gestion">1</span>
+    </button>
+    <button class="filtro-btn" data-filtro="comunidad" onclick="filtrar(this)">
+      Comunidad <span class="filtro-count" id="count-comunidad">1</span>
+    </button>
+    <button class="filtro-btn" data-filtro="reclamo" onclick="filtrar(this)">
+      Reclamos <span class="filtro-count" id="count-reclamo">0</span>
+    </button>
+    <button class="filtro-btn" data-filtro="memoria" onclick="filtrar(this)">
+      Memoria <span class="filtro-count" id="count-memoria">1</span>
+    </button>
+    <button class="filtro-btn" data-filtro="utilidad" onclick="filtrar(this)">
+      Utilidad <span class="filtro-count" id="count-utilidad">0</span>
+    </button>
   </div>
-</section>
+</div>
 
-<!-- ===== NOVEDADES ===== -->
+<!-- ARCHIVO DE NOVEDADES -->
 <!--
-  INSTRUCCIÓN PARA ACTUALIZAR: cada vez que tengas una novedad nueva,
-  copiá uno de los bloques <article class="novedad-card"> y actualizá:
-  - novedad-pilar: el pilar de contenido (Gestión / Comunidad / Reclamo / Memoria / Utilidad)
-  - novedad-fecha: la fecha en formato "15 de mayo de 2026"
-  - novedad-titulo: el título de la novedad
-  - novedad-texto: el cuerpo en 2-3 líneas máximo
-  - novedad-tag: el estado (Gestión en curso / Publicado / Convocatoria / etc.)
-  Mantené siempre 3 cards. Al agregar una nueva, eliminá la más antigua.
+╔══════════════════════════════════════════════════════════════════╗
+║  INSTRUCCIONES DE MANTENIMIENTO                                  ║
+║                                                                  ║
+║  CUANDO PUBLICÁS UNA NOTA NUEVA:                                 ║
+║  1. Creá el archivo en /novedades/nombre-slug.html               ║
+║     (duplicando plantilla-novedad.html)                          ║
+║  2. Si es la más reciente, reemplazá el bloque                   ║
+║     <a class="novedad-destacada"> con la nueva nota              ║
+║     y mové la que era destacada al grid de abajo                 ║
+║  3. Agregá la nueva card al principio del grid                   ║
+║  4. Actualizá los contadores de los filtros (data-filtro)        ║
+║                                                                  ║
+║  ATRIBUTO data-pilar en cada card:                               ║
+║  gestion | comunidad | reclamo | memoria | utilidad              ║
+╚══════════════════════════════════════════════════════════════════╝
 -->
-<section class="novedades" id="novedades">
-  <div class="container">
-    <div style="display:flex; justify-content:space-between; align-items:flex-end; gap:24px; flex-wrap:wrap; margin-bottom:48px;">
-      <div class="section-header" style="margin-bottom:0; max-width:600px;">
-        <div class="section-eyebrow">Lo último del barrio</div>
-        <h2 class="section-title">Novedades <em>recientes.</em></h2>
-        <p class="section-lead">Lo que está pasando en el Centro Vecinal y en el barrio. Actualizamos cuando hay algo concreto para informar.</p>
-      </div>
-      <a href="novedades/index.html" class="ver-todas-link">Ver todas las novedades →</a>
-    </div>
-    <div class="novedades-grid">
 
-      <!-- NOVEDAD 1 — más reciente -->
-      <a href="novedades/avance-nexo-cloacal-mayo-2026.html" class="novedad-card">
-        <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:8px;">
-          <span class="novedad-pilar">Gestión</span>
-          <span class="novedad-fecha">21 de mayo de 2026</span>
-        </div>
-        <h3 class="novedad-titulo">Avance concreto en el Nexo Cloacal: traza definida y compromisos obtenidos</h3>
-        <p class="novedad-texto">La Comisión Directiva se reunió con la Dirección de Redes Sanitarias y Gas. Se confirmó la traza del conducto troncal y el compromiso de actualizar planos y presupuesto.</p>
-        <span class="novedad-tag">Avance verificado</span>
-        <span class="novedad-leer">Leer más →</span>
-      </a>
+<div class="novedades-wrap" id="archivo">
 
-      <!-- NOVEDAD 2 -->
-      <a href="novedades/alarmas-comunitarias-mayo-2026.html" class="novedad-card">
-        <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:8px;">
-          <span class="novedad-pilar">Comunidad</span>
-          <span class="novedad-fecha">21 de mayo de 2026</span>
-        </div>
-        <h3 class="novedad-titulo">Primera entrega de alarmas comunitarias en el barrio</h3>
-        <p class="novedad-texto">Más de 40 vecinos participaron de la prueba piloto y capacitación del programa de alarmas comunitarias junto al Ministerio de Seguridad y el CPC Ruta 20.</p>
-        <span class="novedad-tag">Logro concretado</span>
-        <span class="novedad-leer">Leer más →</span>
-      </a>
-
-      <!-- NOVEDAD 3 (antes era novedad 2, ahora desplazada) -->
-      <a href="novedades/plan-rescate-infraestructura-2026.html" class="novedad-card">
-        <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:8px;">
-          <span class="novedad-pilar">Gestión</span>
-          <span class="novedad-fecha">17 de mayo de 2026</span>
-        </div>
-        <h3 class="novedad-titulo">Presentamos el Plan de Saneamiento de Infraestructura ante el Municipio y la Provincia</h3>
-        <p class="novedad-texto">Deterioro vial, daños en las escuelas y saturación de pozos. Esta semana el Centro Vecinal presenta la gestión formal ante el Intendente, Obras Viales y el Ministerio de Educación.</p>
-        <span class="novedad-tag">Gestión en curso</span>
-        <span class="novedad-leer">Leer más →</span>
-      </a>
-
-      <!-- NOVEDAD 3 -->
-      <a href="novedades/45-aniversario-primera-reunion-vecinal.html" class="novedad-card">
-        <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:8px;">
-          <span class="novedad-pilar">Memoria</span>
-          <span class="novedad-fecha">17 de mayo de 2026</span>
-        </div>
-        <h3 class="novedad-titulo">45 años de la primera reunión vecinal de Ameghino Sur</h3>
-        <p class="novedad-texto">El 26 de julio de 1981, un centenar de vecinos se reunió y eligió la primera comisión barrial. De esa reunión salieron la escuela, los desagües y la organización que hoy continúa el Centro Vecinal.</p>
-        <span class="novedad-tag">Historia del barrio</span>
-        <span class="novedad-leer">Leer más →</span>
-      </a>
-
-    </div>
+  <!-- ── AÑO 2026 ── -->
+  <div class="year-divider">
+    <div class="year-divider-line"></div>
+    <div class="year-divider-label">2026</div>
+    <div class="year-divider-line"></div>
   </div>
-</section>
 
-<!-- ===== QUIÉNES SOMOS ===== -->
-<section class="block about" id="nosotros">
-  <div class="container">
-    <div class="about-grid">
-      <div>
-        <div class="section-eyebrow">Quiénes somos</div>
-        <h2 class="section-title">Una institución <em>con historia</em> y mandato vecinal.</h2>
-        <div class="about-quote">
-          "No nacemos hoy. Somos la continuación de una organización vecinal que ya tiene 45 años, hecha por vecinos que entendieron que organizados se pueden conseguir cosas que solos son imposibles."
+  <!-- NOTA DESTACADA — siempre la más reciente -->
+  <a href="avance-nexo-cloacal-mayo-2026.html" class="novedad-destacada" data-pilar="gestion">
+    <div class="novedad-destacada-badge">Más reciente</div>
+    <div class="novedad-destacada-visual">
+      <div class="novedad-destacada-visual-inner">
+        <div class="novedad-destacada-pilar-icon">
+          <svg viewBox="0 0 24 24"><path d="M14 6l-1-2H5v17h2v-7h5l1 2h7V6h-6zm4 8h-4l-1-2H7V6h5l1 2h5v6z"/></svg>
         </div>
-      </div>
-      <div class="about-text">
-        <p>El <strong>Centro Vecinal Bº Ameghino Sur</strong> es una institución con personería jurídica municipal vigente desde 2009, cuyo origen organizativo se remonta a 1981, cuando un centenar de vecinos eligió a la primera comisión para gestionar los problemas estructurales del barrio: cloacas, desagües, escuela, agua potable.</p>
-        <p>De aquella comisión y de las que la sucedieron salieron los logros que hoy son patrimonio de Ameghino Sur, entre ellos la <strong>Escuela República Argentina</strong>, los desagües y el reclamo histórico por la red cloacal.</p>
-        <p>Hoy, con autoridades reconocidas en septiembre de 2025 por Resolución Nº 284 con un mandato de tres años, el Centro Vecinal continúa esa tarea: <strong>organizar, informar y representar</strong> a los vecinos ante el Estado y otras instituciones, gestionando con seriedad las soluciones que el barrio necesita.</p>
+        <div class="novedad-destacada-pilar-label">Gestión</div>
       </div>
     </div>
+    <div class="novedad-destacada-content">
+      <div class="novedad-destacada-meta">
+        <span class="nd-pilar">Gestión</span>
+        <span class="nd-fecha">21 de mayo de 2026</span>
+      </div>
+      <h2>Avance concreto en el Nexo Cloacal: traza definida y compromisos obtenidos</h2>
+      <p>La Comisión Directiva se reunió con la Dirección de Redes Sanitarias y Gas. Se confirmó la traza del conducto troncal y el compromiso de actualizar planos y presupuesto.</p>
+      <span class="nd-estado">Avance verificado</span>
+      <span class="nd-leer">Leer nota completa →</span>
+    </div>
+  </a>
+
+  <!-- GRID DE NOTAS SECUNDARIAS -->
+  <div class="novedades-grid" id="novedades-grid">
+
+    <!-- NOTA 2 -->
+    <a href="alarmas-comunitarias-mayo-2026.html" class="novedad-card" data-pilar="comunidad">
+      <div class="card-meta">
+        <span class="card-pilar">Comunidad</span>
+        <span class="card-fecha">21 de mayo de 2026</span>
+      </div>
+      <h3 class="card-titulo">Primera entrega de alarmas comunitarias en el barrio</h3>
+      <p class="card-texto">Más de 40 vecinos participaron de la prueba piloto y capacitación junto al Ministerio de Seguridad y el CPC Ruta 20.</p>
+      <span class="card-estado">Logro concretado</span>
+      <span class="card-leer">Leer más →</span>
+    </a>
+
+    <!-- NOTA 3 -->
+    <a href="plan-rescate-infraestructura-2026.html" class="novedad-card" data-pilar="gestion">
+      <div class="card-meta">
+        <span class="card-pilar">Gestión</span>
+        <span class="card-fecha">17 de mayo de 2026</span>
+      </div>
+      <h3 class="card-titulo">Plan de Saneamiento de Infraestructura ante el Municipio y la Provincia</h3>
+      <p class="card-texto">Deterioro vial y saturación de pozos. El Centro Vecinal presentó la gestión formal ante el Intendente, Obras Viales y el Ministerio de Educación.</p>
+      <span class="card-estado">Gestión en curso</span>
+      <span class="card-leer">Leer más →</span>
+    </a>
+
+    <!--
+    ═══════════════════════════════════════════════════════════
+    PLANTILLA PARA AGREGAR UNA NOTA NUEVA — copiá este bloque,
+    pegalo AL PRINCIPIO del grid (arriba de las existentes)
+    y completá los datos:
+    ═══════════════════════════════════════════════════════════
+
+    <a href="slug-de-la-nota.html" class="novedad-card" data-pilar="[gestion|comunidad|reclamo|memoria|utilidad]">
+      <div class="card-meta">
+        <span class="card-pilar">[Pilar]</span>
+        <span class="card-fecha">[Fecha]</span>
+      </div>
+      <h3 class="card-titulo">[Título de la nota]</h3>
+      <p class="card-texto">[Resumen en 2 oraciones]</p>
+      <span class="card-estado">[Estado: Gestión en curso / Publicado / etc.]</span>
+      <span class="card-leer">Leer más →</span>
+    </a>
+    -->
+
   </div>
-</section>
 
-<!-- ===== LÍNEA DE TIEMPO ===== -->
-<section class="timeline" id="historia">
-  <div class="container">
-    <div class="section-header center">
-      <div class="section-eyebrow" style="justify-content: center;">Cuatro décadas y media de barrio organizado</div>
-      <h2 class="section-title">Una <em>línea</em> de continuidad.</h2>
-    </div>
-    <div class="timeline-track">
-      <div class="tl-item">
-        <div class="tl-dot">01</div>
-        <div class="tl-year">1981</div>
-        <p class="tl-text">100 vecinos eligen la primera comisión vecinal del barrio.</p>
-      </div>
-      <div class="tl-item">
-        <div class="tl-dot">02</div>
-        <div class="tl-year">1980s</div>
-        <p class="tl-text">Gestión de la Escuela República Argentina, desagües y servicios básicos.</p>
-      </div>
-      <div class="tl-item">
-        <div class="tl-dot">03</div>
-        <div class="tl-year">2009</div>
-        <p class="tl-text">Personería Jurídica Municipal Nº 0120 (Decreto Nº 5782).</p>
-      </div>
-      <div class="tl-item">
-        <div class="tl-dot">04</div>
-        <div class="tl-year">2025</div>
-        <p class="tl-text">Reconocimiento de nuevas autoridades por Resolución Nº 284.</p>
-      </div>
-      <div class="tl-item">
-        <div class="tl-dot">05</div>
-        <div class="tl-year">2026</div>
-        <p class="tl-text">Plan estratégico de comunicación y participación vecinal.</p>
-      </div>
-    </div>
-  </div>
-</section>
+</div>
 
-<!-- ===== GESTIONES ===== -->
-<section class="block work" id="gestiones">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-eyebrow">En qué estamos trabajando</div>
-      <h2 class="section-title">Tres frentes <em>activos</em> hoy.</h2>
-      <p class="section-lead">No comunicamos triunfos que no existen. Estos son los tres ejes de gestión sobre los que el Centro Vecinal está trabajando ante el Estado en este momento.</p>
-    </div>
-    <div class="work-grid">
-      <article class="work-card">
-        <div class="work-num">/ 01</div>
-        <h3 class="work-title">Red cloacal para todo el barrio</h3>
-        <p class="work-desc">Ameghino Sur es uno de los barrios del sudoeste cordobés que aún no cuenta con red cloacal. Gestionamos la inclusión del barrio en el plan de obras estructurales del Municipio y la Provincia.</p>
-        <span class="work-status">Gestión en curso</span>
-      </article>
-      <article class="work-card">
-        <div class="work-num">/ 02</div>
-        <h3 class="work-title">Recuperación de la Plaza Manzotti</h3>
-        <p class="work-desc">La plaza central del barrio, que homenajea al Capitán Manzotti caído en Malvinas, requiere puesta en valor. Articulamos con la escuela, el jardín y el centro de jubilados.</p>
-        <span class="work-status">Mesa de trabajo abierta</span>
-      </article>
-      <article class="work-card">
-        <div class="work-num">/ 03</div>
-        <h3 class="work-title">Seguridad y mejora del espacio público</h3>
-        <p class="work-desc">Articulación con Comisaría 20, CPC Ruta 20 y Centro Operativo para reforzar patrullajes, mejorar el alumbrado y resolver bacheo de calles internas del barrio.</p>
-        <span class="work-status">Gestión en curso</span>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ===== BANNER WHATSAPP ===== -->
-<section class="wa-banner" id="whatsapp">
-  <div class="container">
-    <div class="wa-inner">
-      <div class="wa-text">
-        <h3>Enterate de todo, <em>antes que nadie.</em></h3>
-        <p>Sumate al canal oficial de WhatsApp para recibir información de gestiones, asambleas, novedades y avisos importantes del barrio. Tu privacidad está protegida: nadie ve tu número.</p>
-      </div>
-      <a href="https://whatsapp.com/channel/0029VbCpKIK2ZjCwYJK0nw1D" target="_blank" rel="noopener" class="wa-cta">
-        <svg viewBox="0 0 24 24" fill="currentColor">
-          <path d="M17.498 14.382c-.301-.15-1.767-.867-2.04-.966-.273-.101-.473-.15-.673.15-.197.295-.771.964-.944 1.162-.175.195-.349.21-.646.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.77-1.66-2.07-.174-.3-.019-.465.13-.615.136-.135.301-.345.451-.523.146-.181.194-.301.297-.496.1-.21.049-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172-.015-.371-.015-.571-.015-.2 0-.523.074-.797.359-.273.3-1.045 1.02-1.045 2.475s1.07 2.865 1.219 3.075c.149.195 2.105 3.195 5.1 4.485.714.3 1.27.48 1.704.629.714.227 1.365.195 1.88.121.574-.091 1.767-.721 2.016-1.426.255-.705.255-1.29.18-1.425-.074-.135-.27-.21-.57-.345m-5.446 7.443h-.016c-1.77 0-3.524-.48-5.055-1.38l-.36-.214-3.75.975 1.005-3.645-.239-.375c-.99-1.576-1.516-3.391-1.516-5.26 0-5.445 4.455-9.885 9.942-9.885 2.654 0 5.145 1.035 7.021 2.91 1.875 1.859 2.909 4.35 2.909 6.99-.004 5.444-4.46 9.885-9.935 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652c1.746.943 3.71 1.444 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411"/>
-        </svg>
-        Unirme al canal
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ===== PRÓXIMA ASAMBLEA ===== -->
-<!--
-  INSTRUCCIÓN PARA ACTUALIZAR:
-  - Cuando HAY fecha confirmada: dejá visible el bloque .asamblea-card y comentá el .asamblea-pendiente
-  - Cuando NO hay fecha: comentá el .asamblea-card y dejá visible el .asamblea-pendiente
-  - Actualizá los datos: fecha, hora, lugar y orden del día
--->
-<section class="asamblea" id="asamblea">
-  <div class="container">
-    <div class="asamblea-inner">
-      <div>
-        <div class="asamblea-eyebrow">Participación vecinal</div>
-        <h2>Próxima <em>asamblea</em> abierta.</h2>
-        <p class="asamblea-lead">Las asambleas son el espacio formal donde los vecinos discuten prioridades, revisan lo actuado y votan decisiones. Son abiertas a todos los vecinos del barrio.</p>
-      </div>
-
-      <!-- MODO CON FECHA CONFIRMADA — descomentar cuando haya fecha -->
-      <!--
-      <div class="asamblea-card">
-        <div class="asamblea-dato">
-          <span class="asamblea-dato-label">Fecha</span>
-          <span class="asamblea-dato-valor">Sábado 6 de septiembre de 2026</span>
-        </div>
-        <div class="asamblea-divider"></div>
-        <div class="asamblea-dato">
-          <span class="asamblea-dato-label">Hora</span>
-          <span class="asamblea-dato-valor">18:00 hs</span>
-        </div>
-        <div class="asamblea-divider"></div>
-        <div class="asamblea-dato">
-          <span class="asamblea-dato-label">Lugar</span>
-          <span class="asamblea-dato-valor">Sede del Centro Vecinal · Aconcagua 4078</span>
-        </div>
-        <div class="asamblea-divider"></div>
-        <div class="asamblea-dato">
-          <span class="asamblea-dato-label">Orden del día</span>
-          <span class="asamblea-dato-valor">Plan de trabajo 2do semestre · Estado de gestiones · Preguntas abiertas</span>
-        </div>
-        <a href="https://whatsapp.com/channel/0029VbCpKIK2ZjCwYJK0nw1D" target="_blank" rel="noopener" class="asamblea-btn">
-          Me anoto →
-        </a>
-      </div>
-      -->
-
-      <!-- MODO SIN FECHA (activo por defecto) -->
-      <div class="asamblea-pendiente">
-        <div class="asamblea-pendiente-icon">
-          <svg viewBox="0 0 24 24"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg>
-        </div>
-        <p><strong>Próxima asamblea en definición.</strong><br>Sumate al canal de WhatsApp para recibir la convocatoria cuando confirmemos fecha y hora.</p>
-        <a href="https://whatsapp.com/channel/0029VbCpKIK2ZjCwYJK0nw1D" target="_blank" rel="noopener" class="asamblea-btn">
-          Avisame cuando haya fecha →
-        </a>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ===== AUTORIDADES ===== -->
-<section class="block auth" id="autoridades">
-  <div class="container">
-    <div class="auth-grid">
-      <div>
-        <div class="section-eyebrow">Marco institucional</div>
-        <h2 class="section-title">Comisión <em>directiva</em> 2025-2028.</h2>
-        <p class="section-lead">El Centro Vecinal está conducido por una comisión directiva con mandato vigente, integrada por vecinas y vecinos del barrio que ejercen sus funciones de manera ad honorem según lo establecido por la Ordenanza Municipal Nº 10.713.</p>
-      </div>
-      <div>
-        <div class="auth-list">
-          <div class="auth-row">
-            <span class="auth-role">Mandato</span>
-            <span class="auth-name">3 años · 2025 – 2028</span>
-          </div>
-          <div class="auth-row">
-            <span class="auth-role">Reconocimiento</span>
-            <span class="auth-name">Resolución Nº 284 · 09/09/2025</span>
-          </div>
-          <div class="auth-row">
-            <span class="auth-role">Personería</span>
-            <span class="auth-name">Municipal Nº 0120 · Decreto 5782/2009</span>
-          </div>
-          <div class="auth-row">
-            <span class="auth-role">Marco normativo</span>
-            <span class="auth-name">Ordenanza Municipal Nº 10.713</span>
-          </div>
-        </div>
-        <div class="auth-meta">
-          <strong>Sede oficial:</strong> Aconcagua 4078, Bº Ameghino Sur, Córdoba.<br>
-          <strong>Atención al vecino:</strong> consultas y solicitudes a través de los canales oficiales o en la sede.<br>
-          <strong>Estructura:</strong> Comisión Directiva, Comisión Revisora de Cuentas y Asamblea de Vecinos, conforme al Estatuto del Centro Vecinal.
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== PARTICIPAR ===== -->
-<section class="block join" id="participar">
-  <div class="container">
-    <div class="section-header center">
-      <div class="section-eyebrow" style="justify-content: center;">Cómo participar</div>
-      <h2 class="section-title">El barrio <em>también es tuyo.</em></h2>
-      <p class="section-lead" style="color: rgba(255,255,255,0.8);">Hay tres formas concretas de sumarte al Centro Vecinal según el tiempo que tengas y cómo te resulte más cómodo participar.</p>
-    </div>
-    <div class="join-grid">
-      <a href="https://whatsapp.com/channel/0029VbCpKIK2ZjCwYJK0nw1D" target="_blank" rel="noopener" class="join-card join-card--primary">
-        <div class="join-icon">
-          <svg viewBox="0 0 24 24"><path d="M17.498 14.382c-.301-.15-1.767-.867-2.04-.966-.273-.101-.473-.15-.673.15-.197.295-.771.964-.944 1.162-.175.195-.349.21-.646.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.77-1.66-2.07-.174-.3-.019-.465.13-.615.136-.135.301-.345.451-.523.146-.181.194-.301.297-.496.1-.21.049-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172-.015-.371-.015-.571-.015-.2 0-.523.074-.797.359-.273.3-1.045 1.02-1.045 2.475s1.07 2.865 1.219 3.075c.149.195 2.105 3.195 5.1 4.485.714.3 1.27.48 1.704.629.714.227 1.365.195 1.88.121.574-.091 1.767-.721 2.016-1.426.255-.705.255-1.29.18-1.425-.074-.135-.27-.21-.57-.345m-5.446 7.443h-.016c-1.77 0-3.524-.48-5.055-1.38l-.36-.214-3.75.975 1.005-3.645-.239-.375c-.99-1.576-1.516-3.391-1.516-5.26 0-5.445 4.455-9.885 9.942-9.885 2.654 0 5.145 1.035 7.021 2.91 1.875 1.859 2.909 4.35 2.909 6.99-.004 5.444-4.46 9.885-9.935 9.885"/></svg>
-        </div>
-        <h4>Sumate al canal</h4>
-        <p>Recibí información del barrio en tu WhatsApp. Sin spam, 2 o 3 mensajes por semana. Es la forma más simple de empezar.</p>
-        <span class="join-arrow">Unirme ahora →</span>
-      </a>
-      <a href="#asamblea" class="join-card">
-        <div class="join-icon">
-          <svg viewBox="0 0 24 24"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg>
-        </div>
-        <h4>Vení a una asamblea</h4>
-        <p>Las asambleas son el espacio formal de participación vecinal. Ahí se discuten prioridades, se rinden cuentas y se votan decisiones.</p>
-        <span class="join-arrow">Ver próxima asamblea →</span>
-      </a>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfuIj4UeUBRCYp6mHQVR_rF1FOnjFrL6lVXGeNS3CsHCtLGIg/viewform" target="_blank" rel="noopener" class="join-card">
-        <div class="join-icon">
-          <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
-        </div>
-        <h4>Sumate como voluntario</h4>
-        <p>Si querés aportar tiempo a las gestiones del barrio (proyecto Plaza Manzotti, comunicación, articulación con instituciones) completá el formulario.</p>
-        <span class="join-arrow">Completar formulario →</span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ===== ENCUESTAS / PARTICIPACIÓN DIGITAL ===== -->
-<!--
-  INSTRUCCIÓN: reemplazá los href de los botones con los links reales de tus Google Forms.
-  Para cada formulario:
-  1. Creá el form en forms.google.com
-  2. Hacé clic en "Enviar" → ícono de link → copiá la URL
-  3. Pegála en el href correspondiente
--->
-<section class="encuestas" id="encuestas">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-eyebrow">Tu voz cuenta</div>
-      <h2 class="section-title">Participá <em>digitalmente.</em></h2>
-      <p class="section-lead">Dos formas de aportar información concreta que el Centro Vecinal usa para gestionar. No requiere registro ni datos personales obligatorios.</p>
-    </div>
-    <div class="encuestas-grid">
-
-      <!-- ENCUESTA 1: RECLAMOS -->
-      <div class="encuesta-card encuesta-card--reclamos">
-        <div class="encuesta-icono encuesta-icono--azul">
-          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
-        </div>
-        <span class="encuesta-tag encuesta-tag--azul">Reclamos vecinales</span>
-        <h3 class="encuesta-titulo">Reportá un problema del barrio</h3>
-        <p class="encuesta-desc">Si hay algo que no funciona en Ameghino Sur —una calle rota, un semáforo apagado, un problema de seguridad, una obra parada— registralo acá. Cada reporte suma a la base de datos que usamos para gestionar.</p>
-        <ul class="encuesta-items">
-          <li>Infraestructura (calles, alumbrado, veredas)</li>
-          <li>Espacios públicos (plazas, baldíos)</li>
-          <li>Seguridad y orden público</li>
-          <li>Servicios (agua, cloacas, recolección)</li>
-        </ul>
-        <!-- Formulario de reclamos activo -->
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfROVPBS6NK_La2fEIjm4DbkQJvAVEdG4ouy1wK6g6MLKuJVQ/viewform" target="_blank" rel="noopener" class="encuesta-btn encuesta-btn--azul">
-          Reportar un problema →
-        </a>
-        <p class="encuesta-nota">Los datos van directo al Centro Vecinal. No se publican de forma individual.</p>
-      </div>
-
-      <!-- ENCUESTA 2: EMPRENDIMIENTOS -->
-      <div class="encuesta-card encuesta-card--emprendimientos">
-        <div class="encuesta-icono encuesta-icono--dorado">
-          <svg viewBox="0 0 24 24"><path d="M20 6h-2.18c.07-.44.18-.88.18-1.34C18 2.54 15.72.12 12.92 0 11.44-.06 10.06.54 9.05 1.6L8 2.7 6.95 1.6C5.94.54 4.56-.06 3.08 0 .28.12-2 2.54-2 4.66c0 .46.11.9.18 1.34H-4c-1.1 0-2 .9-2 2v2c0 1.1.9 2 2 2h.55L-2 20c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2l1.45-7.99H20c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2z"/></svg>
-        </div>
-        <span class="encuesta-tag encuesta-tag--dorado">Comercios y emprendimientos</span>
-        <h3 class="encuesta-titulo">Registrá tu negocio o emprendimiento</h3>
-        <p class="encuesta-desc">Estamos armando el primer directorio de negocios y emprendimientos de Ameghino Sur. Si tenés un comercio, oficio, servicio o emprendimiento en el barrio, registrate para aparecer en el directorio vecinal.</p>
-        <ul class="encuesta-items">
-          <li>Comercios de proximidad</li>
-          <li>Oficios y servicios del hogar</li>
-          <li>Emprendimientos gastronómicos</li>
-          <li>Profesionales y servicios especializados</li>
-        </ul>
-        <!-- Formulario de emprendimientos activo -->
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSevcFM2fEwL4R5m5AlS6VtvqQio5q_r5FXjLsFfTMoYoQQfGw/viewform" target="_blank" rel="noopener" class="encuesta-btn encuesta-btn--dorado">
-          Registrar mi emprendimiento →
-        </a>
-        <p class="encuesta-nota">El directorio es público y gratuito. Podés actualizar tus datos cuando quieras.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ===== CONTACTO ===== -->
-<section class="contacto" id="contacto">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-eyebrow">Contacto</div>
-      <h2 class="section-title">Hablemos <em>directamente.</em></h2>
-      <p class="section-lead">Para consultas, reclamos o cualquier gestión barrial. Respondemos por WhatsApp o mail.</p>
-    </div>
-    <div class="contacto-grid">
-      <div class="contacto-item">
-
-        <div class="contacto-bloque">
-          <span class="contacto-bloque-label">WhatsApp — consultas directas</span>
-          <div class="contacto-bloque-valor">
-            <!-- INSTRUCCIÓN: reemplazá el href con tu número real.
-                 Formato: https://wa.me/549XXXXXXXXXX
-                 Ejemplo Córdoba: https://wa.me/5493516123456
-                 El texto después de ?text= es el mensaje pre-cargado (podés editarlo) -->
-            <a href="https://wa.me/5493513763757?text=Hola%2C%20me%20comunico%20desde%20el%20sitio%20del%20Centro%20Vecinal%20Ameghino%20Sur." target="_blank" rel="noopener" class="contacto-wa-btn">
-              <svg viewBox="0 0 24 24"><path d="M17.498 14.382c-.301-.15-1.767-.867-2.04-.966-.273-.101-.473-.15-.673.15-.197.295-.771.964-.944 1.162-.175.195-.349.21-.646.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.77-1.66-2.07-.174-.3-.019-.465.13-.615.136-.135.301-.345.451-.523.146-.181.194-.301.297-.496.1-.21.049-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172-.015-.371-.015-.571-.015-.2 0-.523.074-.797.359-.273.3-1.045 1.02-1.045 2.475s1.07 2.865 1.219 3.075c.149.195 2.105 3.195 5.1 4.485.714.3 1.27.48 1.704.629.714.227 1.365.195 1.88.121.574-.091 1.767-.721 2.016-1.426.255-.705.255-1.29.18-1.425-.074-.135-.27-.21-.57-.345m-5.446 7.443h-.016c-1.77 0-3.524-.48-5.055-1.38l-.36-.214-3.75.975 1.005-3.645-.239-.375c-.99-1.576-1.516-3.391-1.516-5.26 0-5.445 4.455-9.885 9.942-9.885 2.654 0 5.145 1.035 7.021 2.91 1.875 1.859 2.909 4.35 2.909 6.99-.004 5.444-4.46 9.885-9.935 9.885"/></svg>
-              Escribinos por WhatsApp
-            </a>
-          </div>
-          <p class="contacto-nota">Canal de consultas directas. Distinto al canal de broadcast del barrio.</p>
-        </div>
-
-        <div class="contacto-bloque">
-          <span class="contacto-bloque-label">Mail institucional</span>
-          <div class="contacto-bloque-valor">
-            <a href="mailto:cv.ameghinosur@gmail.com">cv.ameghinosur@gmail.com</a>
-          </div>
-        </div>
-
-        <div class="contacto-bloque">
-          <span class="contacto-bloque-label">Sede</span>
-          <div class="contacto-bloque-valor">
-            Aconcagua 4078<br>
-            Bº Ameghino Sur, Córdoba
-          </div>
-        </div>
-
-        <div class="contacto-bloque">
-          <span class="contacto-bloque-label">Canal de broadcast (novedades del barrio)</span>
-          <div class="contacto-bloque-valor">
-            <a href="https://whatsapp.com/channel/0029VbCpKIK2ZjCwYJK0nw1D" target="_blank" rel="noopener">Unirme al canal de WhatsApp →</a>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="mapa-wrapper">
-        <!-- Mapa embed de Google Maps — sede del Centro Vecinal -->
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3405.0!2d-64.2!3d-31.45!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sAconcagua+4078%2C+C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          title="Sede del Centro Vecinal Bº Ameghino Sur — Aconcagua 4078, Córdoba"
-          aria-label="Mapa de ubicación de la sede"
-        ></iframe>
-        <!-- INSTRUCCIÓN: para obtener el embed correcto:
-          1. Buscá "Aconcagua 4078 Córdoba" en Google Maps
-          2. Hacé clic en Compartir → Incorporar un mapa
-          3. Copiá el src del iframe que te da Google y reemplazá el src de arriba
-        -->
-        <div class="mapa-caption">
-          <strong>Centro Vecinal Bº Ameghino Sur</strong> · Aconcagua 4078, Córdoba
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== FOOTER ===== -->
+<!-- FOOTER -->
 <footer>
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <div class="footer-brand">Centro Vecinal Bº Ameghino Sur</div>
-        <p class="footer-tag">Institución barrial con personería jurídica municipal vigente desde 2009 y 45 años de historia organizativa, dedicada a representar a los vecinos de Ameghino Sur ante el Estado y las instituciones.</p>
-        <p class="footer-lema">Juntos podemos hacer lo que sea</p>
-      </div>
-      <div class="footer-col">
-        <h5>Contacto</h5>
-        <p>
-          Aconcagua 4078<br>
-          Bº Ameghino Sur<br>
-          Córdoba, Argentina<br><br>
-          <a href="mailto:cv.ameghinosur@gmail.com">cv.ameghinosur@gmail.com</a>
-        </p>
-      </div>
-      <div class="footer-col">
-        <h5>Marco legal</h5>
-        <ul>
-          <li>Personería Jurídica Nº 0120</li>
-          <li>Decreto Municipal Nº 5782/09</li>
-          <li>Resolución Nº 284/2025</li>
-          <li>Ordenanza Nº 10.713</li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 Centro Vecinal Bº Ameghino Sur · Todos los derechos reservados</span>
-      <span>Córdoba, Argentina</span>
-    </div>
+  <div class="footer-mini">
+    <span>© 2026 Centro Vecinal Bº Ameghino Sur · Personería Municipal Nº 0120</span>
+    <a href="/index.html">Volver al inicio</a>
   </div>
 </footer>
+
+<script>
+  // ─── FILTRO POR PILAR ───────────────────────────────────────────
+  function filtrar(btn) {
+    const filtro = btn.dataset.filtro;
+
+    // Activar botón seleccionado
+    document.querySelectorAll('.filtro-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    // Filtrar nota destacada
+    const destacada = document.querySelector('.novedad-destacada');
+    if (destacada) {
+      const pilarDestacada = destacada.dataset.pilar;
+      destacada.style.display = (filtro === 'todos' || pilarDestacada === filtro) ? '' : 'none';
+    }
+
+    // Filtrar cards del grid
+    document.querySelectorAll('.novedad-card').forEach(card => {
+      const pilar = card.dataset.pilar;
+      card.style.display = (filtro === 'todos' || pilar === filtro) ? '' : 'none';
+    });
+
+    // Mostrar estado vacío si no hay resultados visibles
+    const grid = document.getElementById('novedades-grid');
+    const visibles = grid.querySelectorAll('.novedad-card[style=""],.novedad-card:not([style])');
+    const hayDestacada = destacada && destacada.style.display !== 'none';
+
+    let vacio = document.getElementById('estado-vacio');
+    if (!hayDestacada && visibles.length === 0) {
+      if (!vacio) {
+        vacio = document.createElement('div');
+        vacio.id = 'estado-vacio';
+        vacio.className = 'archivo-vacio';
+        vacio.innerHTML = '<p>No hay novedades en esta categoría todavía.<br>Volvé pronto o <a href="/index.html#whatsapp">sumate al canal de WhatsApp</a> para recibir las novedades.</p>';
+        grid.parentNode.insertBefore(vacio, grid.nextSibling);
+      }
+      vacio.style.display = '';
+    } else {
+      if (vacio) vacio.style.display = 'none';
+    }
+  }
+
+  // ─── CONTAR notas por pilar al cargar ──────────────────────────
+  document.addEventListener('DOMContentLoaded', () => {
+    const contadores = { gestion: 0, comunidad: 0, reclamo: 0, memoria: 0, utilidad: 0 };
+    let total = 0;
+
+    const destacada = document.querySelector('.novedad-destacada');
+    if (destacada) {
+      const p = destacada.dataset.pilar;
+      if (contadores[p] !== undefined) contadores[p]++;
+      total++;
+    }
+
+    document.querySelectorAll('.novedad-card').forEach(card => {
+      const p = card.dataset.pilar;
+      if (contadores[p] !== undefined) contadores[p]++;
+      total++;
+    });
+
+    document.getElementById('count-todos').textContent = total;
+    Object.keys(contadores).forEach(k => {
+      const el = document.getElementById('count-' + k);
+      if (el) el.textContent = contadores[k];
+    });
+  });
+</script>
 
 </body>
 </html>

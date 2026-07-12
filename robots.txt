@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /novedades/plantilla-novedad.html
+Sitemap: https://cvameghinosur.com.ar/sitemap.xml

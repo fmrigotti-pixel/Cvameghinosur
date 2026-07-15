@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Historia del Barrio · Centro Vecinal Bº Ameghino Sur</title>
+<meta name="description" content="La historia del barrio Ameghino Sur y su Centro Vecinal. Más de 60 años de organización vecinal en Córdoba.">
+<meta property="og:title" content="Historia de Ameghino Sur · Centro Vecinal">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://cvameghinosur.com.ar/historia.html">
+<meta property="og:image" content="https://cvameghinosur.com.ar/og-image.png">
+
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-31C0JRYEMT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-31C0JRYEMT');
+</script>
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --azul-profundo: #1B3A5C;
+    --azul-oscuro: #0F2540;
+    --dorado: #E8A020;
+    --crema: #FAF7F0;
+    --crema-oscuro: #F0EBDF;
+    --gris-texto: #1A202C;
+    --gris-medio: #5C6573;
+    --gris-claro: #E2E8F0;
+    --blanco: #FFFFFF;
+    --display: 'Fraunces', Georgia, serif;
+    --body: 'Inter', -apple-system, sans-serif;
+    --max-w: 1240px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--body);
+    background: var(--crema);
+    color: var(--gris-texto);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* NAV */
+  body > nav {
+    position: sticky; top: 0;
+    background: rgba(250,247,240,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(27,58,92,0.08);
+    z-index: 100; padding: 16px 0;
+  }
+  .nav-inner {
+    max-width: var(--max-w); margin: 0 auto; padding: 0 24px;
+    display: flex; justify-content: space-between; align-items: center; gap: 24px;
+  }
+  .logo-mark { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--azul-profundo); }
+  .logo-circle {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: var(--azul-profundo); border: 2px solid var(--dorado);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--dorado); font-family: var(--display); font-weight: 700; font-size: 14px; flex-shrink: 0;
+  }
+  .logo-text { font-family: var(--display); font-weight: 600; font-size: 16px; line-height: 1.1; letter-spacing: -0.02em; }
+  .logo-text small { display: block; font-family: var(--body); font-size: 10px; font-weight: 400; color: var(--gris-medio); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 2px; }
+  .nav-back { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: var(--azul-profundo); text-decoration: none; transition: color 0.2s; }
+  .nav-back:hover { color: var(--dorado); }
+  .nav-back svg { width: 16px; height: 16px; fill: currentColor; }
+
+  /* HERO */
+  .page-hero {
+    background: var(--azul-oscuro); color: var(--blanco);
+    padding: 80px 0 72px; position: relative; overflow: hidden;
+  }
+  .page-hero::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 70% 50%, rgba(232,160,32,0.08) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .page-hero-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; position: relative; }
+  .page-eyebrow {
+    display: inline-flex; align-items: center; gap: 12px;
+    font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--dorado); margin-bottom: 20px;
+  }
+  .page-eyebrow::before { content: ''; width: 24px; height: 1px; background: var(--dorado); }
+  .page-title {
+    font-family: var(--display); font-weight: 600;
+    font-size: clamp(36px, 5vw, 64px); line-height: 1.0;
+    letter-spacing: -0.03em; margin-bottom: 16px;
+  }
+  .page-title em { font-style: italic; font-weight: 400; color: var(--dorado); }
+  .page-lead { font-size: 17px; line-height: 1.6; color: rgba(255,255,255,0.7); max-width: 560px; }
+
+  /* AVISO EN CONSTRUCCIÓN */
+  .aviso-construccion {
+    background: rgba(232,160,32,0.1); border: 1px solid rgba(232,160,32,0.3);
+    border-radius: 4px; padding: 16px 20px; margin-top: 40px;
+    display: flex; align-items: flex-start; gap: 12px;
+    font-size: 13px; color: rgba(255,255,255,0.75); line-height: 1.5;
+    max-width: 640px;
+  }
+  .aviso-construccion svg { width: 18px; height: 18px; fill: var(--dorado); flex-shrink: 0; margin-top: 1px; }
+
+  /* INTRO */
+  .intro-section {
+    background: var(--blanco);
+    border-bottom: 1px solid rgba(27,58,92,0.06);
+    padding: 72px 0;
+  }
+  .intro-inner {
+    max-width: var(--max-w); margin: 0 auto; padding: 0 24px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+  }
+  .intro-titulo {
+    font-family: var(--display); font-weight: 600;
+    font-size: clamp(26px, 3vw, 36px); line-height: 1.1;
+    color: var(--azul-profundo); letter-spacing: -0.02em; margin-bottom: 20px;
+  }
+  .intro-titulo em { font-style: italic; font-weight: 400; color: var(--dorado); }
+  .intro-texto { font-size: 16px; line-height: 1.75; color: var(--gris-medio); }
+  .intro-texto p { margin-bottom: 16px; }
+  .intro-texto p:last-child { margin-bottom: 0; }
+  .intro-imagen {
+    position: relative; border-radius: 4px; overflow: hidden;
+    box-shadow: 0 24px 60px -16px rgba(27,58,92,0.2);
+  }
+  .intro-imagen img { width: 100%; height: auto; display: block; }
+  .intro-imagen-caption {
+    background: var(--azul-profundo); padding: 12px 16px;
+    font-size: 12px; color: rgba(255,255,255,0.65); font-style: italic;
+  }
+
+  /* LÍNEA DE TIEMPO */
+  .timeline-section {
+    padding: 100px 0;
+    background: var(--crema);
+  }
+  .timeline-header {
+    max-width: var(--max-w); margin: 0 auto; padding: 0 24px;
+    text-align: center; margin-bottom: 80px;
+  }
+  .section-eyebrow {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--dorado); display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 16px;
+  }
+  .section-eyebrow::before, .section-eyebrow::after { content: ''; width: 32px; height: 1px; background: var(--dorado); }
+  .section-title {
+    font-family: var(--display); font-weight: 600;
+    font-size: clamp(28px, 3.5vw, 44px); line-height: 1.1;
+    color: var(--azul-profundo); letter-spacing: -0.025em;
+  }
+  .section-title em { font-style: italic; font-weight: 400; color: var(--dorado); }
+
+  /* Timeline */
+  .timeline {
+    max-width: 860px; margin: 0 auto; padding: 0 24px;
+    position: relative;
+  }
+  .timeline::before {
+    content: ''; position: absolute;
+    left: 50%; top: 0; bottom: 0;
+    width: 2px; background: linear-gradient(to bottom, var(--dorado), rgba(232,160,32,0.1));
+    transform: translateX(-50%);
+  }
+  .timeline-item {
+    display: grid; grid-template-columns: 1fr 60px 1fr;
+    gap: 0; margin-bottom: 64px; position: relative;
+  }
+  .timeline-item:last-child { margin-bottom: 0; }
+
+  /* Contenido izquierda/derecha alternado */
+  .timeline-content {
+    background: var(--blanco); border: 1px solid rgba(27,58,92,0.08);
+    border-radius: 4px; padding: 28px 28px;
+    position: relative; transition: box-shadow 0.2s;
+  }
+  .timeline-content:hover { box-shadow: 0 12px 32px -10px rgba(27,58,92,0.12); }
+  .timeline-item:nth-child(odd) .timeline-content { grid-column: 1; grid-row: 1; }
+  .timeline-item:nth-child(odd) .timeline-dot { grid-column: 2; grid-row: 1; }
+  .timeline-item:nth-child(odd) .timeline-empty { grid-column: 3; grid-row: 1; }
+  .timeline-item:nth-child(even) .timeline-empty { grid-column: 1; grid-row: 1; }
+  .timeline-item:nth-child(even) .timeline-dot { grid-column: 2; grid-row: 1; }
+  .timeline-item:nth-child(even) .timeline-content { grid-column: 3; grid-row: 1; }
+
+  .timeline-dot {
+    display: flex; flex-direction: column; align-items: center;
+    justify-content: flex-start; padding-top: 28px; gap: 8px;
+  }
+  .timeline-dot-circle {
+    width: 44px; height: 44px; border-radius: 50%;
+    background: var(--azul-profundo); border: 3px solid var(--dorado);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; z-index: 1; position: relative;
+  }
+  .timeline-dot-circle svg { width: 18px; height: 18px; fill: var(--dorado); }
+  .timeline-dot-circle.pendiente {
+    background: var(--crema-oscuro); border-color: rgba(27,58,92,0.2);
+  }
+  .timeline-dot-circle.pendiente svg { fill: rgba(27,58,92,0.3); }
+
+  .timeline-year {
+    font-family: var(--display); font-weight: 700; font-size: 13px;
+    color: var(--dorado); letter-spacing: 0.04em; text-align: center;
+    white-space: nowrap;
+  }
+  .timeline-year.pendiente { color: var(--gris-medio); }
+
+  .timeline-tag {
+    font-size: 9px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--dorado); margin-bottom: 8px;
+  }
+  .timeline-tag.pendiente { color: var(--gris-medio); }
+  .timeline-titulo {
+    font-family: var(--display); font-weight: 600; font-size: 18px;
+    color: var(--azul-profundo); line-height: 1.2; margin-bottom: 10px;
+    letter-spacing: -0.01em;
+  }
+  .timeline-titulo.pendiente { color: var(--gris-medio); }
+  .timeline-desc { font-size: 14px; line-height: 1.65; color: var(--gris-medio); }
+
+  /* Imagen dentro del item */
+  .timeline-img {
+    width: 100%; border-radius: 3px; margin-top: 16px;
+    overflow: hidden; cursor: pointer;
+  }
+  .timeline-img img { width: 100%; height: auto; display: block; transition: transform 0.3s; }
+  .timeline-img:hover img { transform: scale(1.03); }
+  .timeline-img-caption { font-size: 11px; color: var(--gris-medio); font-style: italic; margin-top: 6px; }
+
+  /* Item pendiente */
+  .timeline-content.pendiente {
+    background: rgba(27,58,92,0.02);
+    border-style: dashed; border-color: rgba(27,58,92,0.12);
+  }
+  .pendiente-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 10px; font-weight: 600; color: var(--gris-medio);
+    text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px;
+  }
+  .pendiente-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--gris-claro); }
+
+  /* VECINOS FUNDADORES */
+  .fundadores-section {
+    background: var(--azul-profundo); color: var(--blanco);
+    padding: 80px 0;
+  }
+  .fundadores-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
+  .fundadores-header { margin-bottom: 48px; }
+  .fundadores-eyebrow {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--dorado); display: flex; align-items: center; gap: 12px; margin-bottom: 16px;
+  }
+  .fundadores-eyebrow::before { content: ''; width: 24px; height: 1px; background: var(--dorado); }
+  .fundadores-titulo {
+    font-family: var(--display); font-weight: 600;
+    font-size: clamp(26px, 3vw, 40px); line-height: 1.1;
+    letter-spacing: -0.025em; color: var(--blanco);
+  }
+  .fundadores-titulo em { font-style: italic; font-weight: 400; color: var(--dorado); }
+  .fundadores-lead { font-size: 15px; color: rgba(255,255,255,0.65); line-height: 1.6; margin-top: 12px; max-width: 560px; }
+  .fundadores-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 48px;
+  }
+  .fundador-card {
+    background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 4px; padding: 20px 18px;
+    display: flex; flex-direction: column; gap: 4px;
+  }
+  .fundador-nombre { font-weight: 600; font-size: 14px; color: var(--blanco); line-height: 1.2; }
+  .fundador-rol { font-size: 12px; color: rgba(255,255,255,0.5); }
+  .fundador-periodo { font-size: 11px; color: var(--dorado); font-weight: 600; margin-top: 4px; }
+
+  /* Comisión histórica 1981 */
+  .comision-1981 {
+    background: rgba(232,160,32,0.08); border: 1px solid rgba(232,160,32,0.2);
+    border-radius: 4px; padding: 24px 28px; margin-top: 40px;
+  }
+  .comision-1981-titulo {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--dorado); margin-bottom: 16px;
+  }
+  .comision-1981-lista {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px 32px;
+  }
+  .comision-1981-item { font-size: 13px; color: rgba(255,255,255,0.8); line-height: 1.4; }
+  .comision-1981-item strong { color: var(--blanco); font-weight: 600; }
+
+  /* APORTÁ TU HISTORIA */
+  .aportar-section { background: var(--crema-oscuro); padding: 80px 0; }
+  .aportar-inner {
+    max-width: 680px; margin: 0 auto; padding: 0 24px; text-align: center;
+  }
+  .aportar-icono {
+    width: 64px; height: 64px; border-radius: 50%;
+    background: rgba(232,160,32,0.15); border: 2px solid rgba(232,160,32,0.3);
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 24px;
+  }
+  .aportar-icono svg { width: 28px; height: 28px; fill: var(--dorado); }
+  .aportar-titulo {
+    font-family: var(--display); font-weight: 600;
+    font-size: clamp(24px, 3vw, 36px); line-height: 1.1;
+    color: var(--azul-profundo); letter-spacing: -0.02em; margin-bottom: 16px;
+  }
+  .aportar-titulo em { font-style: italic; font-weight: 400; color: var(--dorado); }
+  .aportar-texto { font-size: 16px; color: var(--gris-medio); line-height: 1.65; margin-bottom: 32px; }
+  .aportar-btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: #25D366; color: var(--blanco); padding: 16px 28px;
+    border-radius: 999px; font-size: 15px; font-weight: 700; text-decoration: none;
+    transition: all 0.25s; box-shadow: 0 8px 20px -6px rgba(37,211,102,0.4);
+  }
+  .aportar-btn:hover { background: #1ebe5d; transform: translateY(-2px); }
+  .aportar-btn svg { width: 20px; height: 20px; fill: var(--blanco); }
+  .aportar-nota { font-size: 13px; color: var(--gris-medio); margin-top: 16px; }
+
+  /* FOOTER */
+  footer { background: var(--azul-oscuro); padding: 32px 0; }
+  .footer-mini {
+    max-width: var(--max-w); margin: 0 auto; padding: 0 24px;
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px;
+    font-size: 12px; color: rgba(255,255,255,0.45);
+  }
+  .footer-mini a { color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s; }
+  .footer-mini a:hover { color: var(--dorado); }
+
+  /* RESPONSIVO */
+  @media (max-width: 900px) {
+    .intro-inner { grid-template-columns: 1fr; gap: 40px; }
+    .intro-imagen { order: -1; }
+    .timeline::before { left: 24px; }
+    .timeline-item { grid-template-columns: 48px 1fr; }
+    .timeline-item:nth-child(odd) .timeline-content,
+    .timeline-item:nth-child(even) .timeline-content { grid-column: 2; grid-row: 1; }
+    .timeline-item:nth-child(odd) .timeline-dot,
+    .timeline-item:nth-child(even) .timeline-dot { grid-column: 1; grid-row: 1; }
+    .timeline-item .timeline-empty { display: none; }
+    .timeline-dot { padding-top: 28px; }
+    .fundadores-grid { grid-template-columns: repeat(2, 1fr); }
+    .comision-1981-lista { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 500px) {
+    .page-hero { padding: 56px 0 48px; }
+    .timeline-section { padding: 64px 0; }
+    .fundadores-grid { grid-template-columns: 1fr; }
+    .fundadores-section { padding: 56px 0; }
+    .aportar-section { padding: 56px 0; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a class="logo-mark" href="https://cvameghinosur.com.ar/">
+      <div class="logo-circle">CV</div>
+      <div class="logo-text">Centro Vecinal <small>Bº Ameghino Sur</small></div>
+    </a>
+    <a class="nav-back" href="https://cvameghinosur.com.ar/">
+      <svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"></path></svg>
+      Volver al inicio
+    </a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-eyebrow">Centro Vecinal Bº Ameghino Sur</div>
+    <h1 class="page-title">Historia del <em>barrio.</em></h1>
+    <p class="page-lead">La memoria de Ameghino Sur construida entre todos. Esta página crece con los aportes de vecinos, documentos históricos y registros de la organización comunitaria.</p>
+    <div class="aviso-construccion">
+      <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg>
+      Esta página está en construcción permanente. Los hitos marcados como "pendiente" esperan aportes de vecinos con información, fotos o documentos históricos.
+    </div>
+  </div>
+</div>
+
+<!-- INTRO: ORIGEN DEL NOMBRE -->
+<!-- RECORTE PERIODÍSTICO -->
+<section style="background:var(--crema-oscuro);padding:80px 0;border-top:1px solid rgba(27,58,92,0.06);">
+  <div style="max-width:var(--max-w);margin:0 auto;padding:0 24px;">
+
+    <div style="text-align:center;margin-bottom:56px;">
+      <div class="section-eyebrow">Documento histórico</div>
+      <h2 class="section-title">El barrio en <em>sus propias palabras.</em></h2>
+      <p style="font-size:15px;color:var(--gris-medio);margin-top:12px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6;">Un recorte periodístico de la década de 1990 — fecha exacta no confirmada — documenta la historia del barrio y la visión de la organización vecinal en palabras de sus propios integrantes.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;">
+
+      <!-- Imagen -->
+      <div>
+        <div style="border-radius:4px;overflow:hidden;box-shadow:0 24px 60px -16px rgba(27,58,92,0.2);background:var(--azul-oscuro);">
+          <!--
+            INSTRUCCIÓN: convertí el PDF escaneado a JPG y subilo como:
+            /img/historia/recorte-periodistico.jpg
+          -->
+          <img src="/img/historia/recorte-periodistico.jpg" alt="Recorte periodístico — Historia del Centro Vecinal Bº Ameghino Sur — Década de 1990" style="width:100%;height:auto;display:block;" onerror="this.parentElement.style.minHeight=&#39;200px&#39;;this.style.display=&#39;none&#39;">
+          <div style="padding:12px 16px;font-size:12px;color:rgba(255,255,255,0.55);font-style:italic;">
+            Recorte periodístico · Bº Ameghino Sur · Escuela de Vecinalismo · Década de 1990
+          </div>
+        </div>
+        <div style="border-radius: 4px; overflow: hidden; box-shadow: rgba(27, 58, 92, 0.15) 0px 8px 24px -8px; background: var(--azul-oscuro); margin-top: 12px;">
+          <img src="/img/historia/sede-historica.jpg" alt="Sede histórica del Centro Vecinal Ameghino Sud con Biblioteca Malvinas Argentinas" style="width:100%;height:auto;display:block;" onerror="this.parentElement.style.display=&#39;none&#39;">
+          <div style="padding:10px 14px;font-size:11px;color:rgba(255,255,255,0.5);font-style:italic;">
+            Sede histórica del Centro Vecinal Ameghino Sud · Biblioteca Pública Malvinas Argentinas
+          </div>
+        </div>
+        <div style="border-radius:4px;overflow:hidden;box-shadow:0 8px 24px -8px rgba(27,58,92,0.15);background:var(--azul-oscuro);margin-top:12px;">
+          <img src="/img/historia/comision-historica.jpg" alt="Comisión vecinal histórica reunida" style="width:100%;height:auto;display:block;" onerror="this.parentElement.style.display='none'">
+          <div style="padding:10px 14px;font-size:11px;color:rgba(255,255,255,0.5);font-style:italic;">
+            La comisión reunida · Bº Ameghino Sur
+          </div>
+        </div>
+      </div>
+
+      <!-- Transcripción -->
+      <div>
+        <!-- ESCUELA DE VECINALISMO -->
+        <div style="background:var(--azul-profundo);border-radius:4px;padding:24px 28px;margin-bottom:24px;position:relative;overflow:hidden;">
+          <div style="position:absolute;top:-10px;right:16px;font-family:var(--display);font-size:80px;font-weight:700;color:rgba(255,255,255,0.04);line-height:1;pointer-events:none;">45</div>
+          <div style="font-size:10px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--dorado);margin-bottom:8px;">Publicación histórica</div>
+          <div style="font-family:var(--display);font-weight:600;font-size:22px;color:var(--blanco);line-height:1.1;margin-bottom:4px;">Bº Ameghino Sur</div>
+          <div style="font-family:var(--display);font-style:italic;font-size:32px;color:var(--dorado);line-height:1.1;margin-bottom:12px;">Escuela de Vecinalismo</div>
+          <div style="font-size:13px;color:rgba(255,255,255,0.6);line-height:1.5;">Artículo periodístico de la década de 1990 que documenta la historia del Centro Vecinal y su filosofía de organización comunitaria. Fecha exacta no confirmada.</div>
+        </div>
+
+        <div style="font-size:10px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--dorado);margin-bottom:20px;">Transcripción del recorte</div>
+
+        <div style="background:var(--blanco);border-left:4px solid var(--dorado);padding:16px 20px;border-radius:0 4px 4px 0;margin-bottom:24px;font-style:italic;font-size:14px;color:var(--gris-medio);line-height:1.7;">
+          "Pocos saben que este barrio, que se haya enclavado al costado sur de la Ruta 20, por la década del '50 era llamado barrio Estación Flores y que posteriormente se llamó Las Playas hasta que adoptó definitivamente el nombre de Ameghino Sur. Por aquel entonces era un gran descampado con algunas casitas situadas entre calles de tierra."
+        </div>
+
+        <div style="font-size:15px;line-height:1.75;color:var(--gris-texto);">
+          <p style="margin-bottom:16px;">No se puede hablar de Ameghino Sur y su historia sin mencionar a quien fuera Presidente del Centro Vecinal desde 1964 en adelante, <strong>Don José Jiménez</strong>. La actividad de Don Jiménez se inicia por 1964, junto a un grupo humano de trabajo, y comienzan a buscar soluciones a los graves problemas del barrio.</p>
+          <p style="margin-bottom:16px;">La primera tarea fue poner en orden las deudas y demás papelerías y arreglar las instalaciones del Centro Vecinal. De su esfuerzo y con la participación de los vecinos salieron el asfalto, el agua corriente de OSN, el transporte, los semáforos, el reparto domiciliario de cartas, los juegos infantiles de la plaza. Se creó una escuela de corte y confección y una escuela para adultos.</p>
+          <p style="margin-bottom:16px;">También se consigue un bachillerato que lleva el nombre de <strong>Bachillerato Técnico República Argentina</strong>, que empezó a funcionar en marzo de 1984. Un aspecto al que siempre se le dio particular importancia fue el de la educación: es así como se funda una biblioteca hoy llamada <strong>Malvinas Argentinas</strong>.</p>
+        </div>
+
+        <div style="background:rgba(27,58,92,0.04);border:1px solid rgba(27,58,92,0.08);border-radius:4px;padding:20px 24px;margin-bottom:24px;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--azul-profundo);margin-bottom:12px;">En palabras de la organización vecinal</div>
+          <p style="font-size:14px;color:var(--gris-medio);line-height:1.65;margin-bottom:10px;font-style:italic;">"La tarea vecinalista no es solamente peticionar sino buscar la participación de todos. La mejor forma de gobernar un Centro Vecinal es con participación y ejercicio pleno de la democracia."</p>
+          <p style="font-size:14px;color:var(--gris-medio);line-height:1.65;font-style:italic;">"Pensamos que juntos, gobierno y comunidad, se pueden buscar las soluciones más viables y positivas porque lo que se solicita es lo que el barrio está necesitando."</p>
+        </div>
+
+        <!-- Lista de participantes -->
+        <div style="background:var(--azul-profundo);border-radius:4px;padding:28px;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--dorado);margin-bottom:6px;">Participaron en esta nota</div>
+          <div style="font-size:12px;color:rgba(255,255,255,0.5);margin-bottom:18px;">Comisión Vecinal de Barrio Ameghino Sur · Reunión informativa 26/07/81<br>Presidente: Don José Jiménez</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px 24px;">
+            <div style="font-size:13px;color:rgba(255,255,255,0.85);">Justo M. Rigotti</div>
+            <div style="font-size:13px;color:rgba(255,255,255,0.85);">Carlos H. Luna</div>
+            <div style="font-size:13px;color:rgba(255,255,255,0.85);">Héctor Ibarra</div>
+            <div style="font-size:13px;color:rgba(255,255,255,0.85);">Ricardo A. Caro</div>
+            <div style="font-size:13px;color:rgba(255,255,255,0.85);">Luis Rosales</div>
+            <div style="font-size:13px;color:rgba(255,255,255,0.85);">Dardo López</div>
+            <div style="font-size:13px;color:rgba(255,255,255,0.85);">María F. Blasetti</div>
+            <div style="font-size:13px;color:rgba(255,255,255,0.85);">Gladys de Galíndez</div>
+            <div style="font-size:13px;color:rgba(255,255,255,0.85);">Víctor Hipólito Rigotti</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- LÍNEA DE TIEMPO -->
+<section class="timeline-section">
+  <div class="timeline-header">
+    <div class="section-eyebrow">Cronología</div>
+    <h2 class="section-title">Más de 60 años de <em>organización vecinal.</em></h2>
+  </div>
+
+  <div class="timeline">
+
+    <!-- 1950s -->
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <div class="timeline-tag">Origen</div>
+        <h3 class="timeline-titulo">Primeros pobladores y el gran descampado</h3>
+        <p class="timeline-desc">El barrio comienza a poblarse al costado sur de la Ruta 20. Era conocido sucesivamente como Estación Flores y Las Playas antes de adoptar el nombre definitivo de Ameghino Sur. Un gran descampado con casitas entre calles de tierra.</p>
+      </div>
+      <div class="timeline-dot">
+        <div class="timeline-dot-circle">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg>
+        </div>
+        <span class="timeline-year">1950s</span>
+      </div>
+      <div class="timeline-empty"></div>
+    </div>
+
+    <!-- 1964 -->
+    <div class="timeline-item">
+      <div class="timeline-empty"></div>
+      <div class="timeline-dot">
+        <div class="timeline-dot-circle">
+          <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"></path></svg>
+        </div>
+        <span class="timeline-year">1964</span>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-tag">Organización</div>
+        <h3 class="timeline-titulo">Don José Jiménez asume la Presidencia del Centro Vecinal</h3>
+        <p class="timeline-desc">José Jiménez, junto a un grupo de vecinos, comienza a organizarse para buscar soluciones a los graves problemas del barrio. La primera tarea fue poner en orden deudas, papelerías e instalaciones del Centro Vecinal. Luego se encararon las necesidades más apremiantes.</p>
+      </div>
+    </div>
+
+    <!-- 1981 -->
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <div class="timeline-tag">Fundacional</div>
+        <h3 class="timeline-titulo">26 de julio de 1981 — La reunión que organizó al barrio</h3>
+        <p class="timeline-desc">Aproximadamente 100 vecinos se reúnen en las instalaciones del Centro Vecinal junto al Sr. E. Bazán (Coordinador Zonal de Centros Vecinales) y el Sr. Bertea (Dirección Provincial de Hidráulica). El barrio enfrentaba cinco problemas críticos que ningún vecino podía resolver solo. Ese día eligieron ocho delegados, firmaron un acta y le dieron mandato formal a la organización que hoy continúa el Centro Vecinal.</p>
+
+        <!-- Video -->
+        <div style="margin-top:20px;border-radius:4px;overflow:hidden;background:var(--azul-oscuro);">
+          <iframe
+            src="https://www.youtube.com/embed/AFjqkoT93KE"
+            title="Acta de Fundación — Reunión Vecinal Ameghino Sur, 26 de julio de 1981"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            style="width:100%;aspect-ratio:16/9;display:block;border:0;">
+          </iframe>
+          <div style="padding:10px 14px;font-size:11px;color:rgba(255,255,255,0.5);font-style:italic;">Acta de fundación de la Comisión Vecinal del Barrio Ameghino Sud · Córdoba, julio de 1981</div>
+        </div>
+
+        <!-- Los 5 problemas -->
+        <div style="margin-top:20px;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--dorado);margin-bottom:12px;">Los 5 problemas que motivaron la reunión</div>
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <div style="display:flex;gap:12px;align-items:flex-start;font-size:13px;color:var(--gris-medio);line-height:1.5;">
+              <span style="font-weight:700;color:var(--dorado);flex-shrink:0;">1.</span>
+              <span><strong style="color:var(--gris-texto);">Desagüe de Av. Fuerza Aérea</strong> — Falta de desagüe adecuado generando inundaciones recurrentes.</span>
+            </div>
+            <div style="display:flex;gap:12px;align-items:flex-start;font-size:13px;color:var(--gris-medio);line-height:1.5;">
+              <span style="font-weight:700;color:var(--dorado);flex-shrink:0;">2.</span>
+              <span><strong style="color:var(--gris-texto);">Pozos ciegos y cloacas</strong> — Sin red cloacal, los pozos ciegos colapsaban y hundían los terrenos.</span>
+            </div>
+            <div style="display:flex;gap:12px;align-items:flex-start;font-size:13px;color:var(--gris-medio);line-height:1.5;">
+              <span style="font-weight:700;color:var(--dorado);flex-shrink:0;">3.</span>
+              <span><strong style="color:var(--gris-texto);">Hundimiento del terreno</strong> — La "doble conexión" subterránea generaba filtraciones severas.</span>
+            </div>
+            <div style="display:flex;gap:12px;align-items:flex-start;font-size:13px;color:var(--gris-medio);line-height:1.5;">
+              <span style="font-weight:700;color:var(--dorado);flex-shrink:0;">4.</span>
+              <span><strong style="color:var(--gris-texto);">Agua potable</strong> — Deficiencias en el suministro que afectaban a los residentes.</span>
+            </div>
+            <div style="display:flex;gap:12px;align-items:flex-start;font-size:13px;color:var(--gris-medio);line-height:1.5;">
+              <span style="font-weight:700;color:var(--dorado);flex-shrink:0;">5.</span>
+              <span><strong style="color:var(--gris-texto);">Escuela Provincial paralizada</strong> — Las obras estaban detenidas, incluyendo el sector secundario.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cita del acta -->
+        <div style="margin-top:20px;background:var(--azul-profundo);border-radius:4px;padding:20px 24px;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--dorado);margin-bottom:8px;">Del acta original</div>
+          <p style="font-size:13px;color:rgba(255,255,255,0.8);font-style:italic;line-height:1.65;">"El Sr. Rigotti explicó al público la situación real del barrio, solicitándose el nombramiento de una Comisión o Subcomisión para encargarse de la prosecución del trámite legal necesario para la solución de los problemas."</p>
+          <div style="font-size:11px;color:rgba(255,255,255,0.4);margin-top:8px;">Acta de Reunión Informativa · 26 de julio de 1981</div>
+        </div>
+
+        <!-- Botón a página completa -->
+        <a href="/historia/reunion-fundacional-1981.html"
+           style="display:inline-flex;align-items:center;gap:8px;margin-top:20px;background:var(--azul-profundo);color:var(--blanco);padding:12px 20px;border-radius:999px;font-size:13px;font-weight:700;text-decoration:none;box-shadow:0 4px 12px -4px rgba(27,58,92,0.3);">
+          Leer la historia completa — con acta y delegados
+          <svg viewBox="0 0 24 24" style="width:14px;height:14px;fill:currentColor;"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+        </a>
+
+      </div>
+      <div class="timeline-dot">
+        <div class="timeline-dot-circle">
+          <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path></svg>
+        </div>
+        <span class="timeline-year">1981</span>
+      </div>
+      <div class="timeline-empty"></div>
+    </div>
+
+    <!-- 1984 -->
+    <div class="timeline-item">
+      <div class="timeline-empty"></div>
+      <div class="timeline-dot">
+        <div class="timeline-dot-circle">
+          <svg viewBox="0 0 24 24"><path d="M12 3L1 9l4 2.18V15c0 3 2 5 7 5s7-2 7-5v-3.82L22 9 12 3zm6 10.72V15c0 1.58-1.19 3-5 3s-5-1.42-5-3v-1.28l5 2.72 5-2.72z"></path></svg>
+        </div>
+        <span class="timeline-year">1984</span>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-tag">Logro educativo</div>
+        <h3 class="timeline-titulo">Apertura del Bachillerato Técnico República Argentina</h3>
+        <p class="timeline-desc">Fruto de años de gestión vecinal, el barrio obtiene el Bachillerato Técnico República Argentina, que comienza a funcionar en marzo de 1984. Una victoria concreta de la organización comunitaria para garantizar educación secundaria en el barrio.</p>
+      </div>
+    </div>
+
+    <!-- 1988 -->
+    <div class="timeline-item">
+      <div class="timeline-empty"></div>
+      <div class="timeline-dot">
+        <div class="timeline-dot-circle">
+          <svg viewBox="0 0 24 24"><path d="M12 3l1.09 3.26L16 7.27l-2.91 2.84.69 4.01L12 12.4l-3.78 1.72.69-4.01L6 7.27l2.91-.01L12 3z"/></svg>
+        </div>
+        <span class="timeline-year">1988</span>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-tag">Comunidad</div>
+        <h3 class="timeline-titulo">Gran Peña Familiar en la Plaza del Barrio</h3>
+        <p class="timeline-desc">El 30 de diciembre de 1988, la Comisión Vecinal organizó una Gran Peña Familiar con entrada libre y gratuita en la Plaza del Barrio. Seis artistas, folklore, chamamé y humor. El programa de mano conservado es hoy un documento histórico único que muestra la vida del barrio, la comisión y sus gestiones en ese año.</p>
+        <a href="/historia/pena-familiar-1988.html"
+           style="display:inline-flex;align-items:center;gap:8px;margin-top:16px;background:var(--azul-profundo);color:var(--blanco);padding:10px 18px;border-radius:999px;font-size:13px;font-weight:700;text-decoration:none;box-shadow:0 4px 12px -4px rgba(27,58,92,0.3);">
+          Ver el archivo completo →
+        </a>
+      </div>
+    </div>
+
+    <!-- 1989 -->
+    <div class="timeline-item">
+      <div class="timeline-empty"></div>
+      <div class="timeline-dot">
+        <div class="timeline-dot-circle">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm7.93 9h-2.95c-.11-1.7-.44-3.29-.98-4.7 1.98 1.08 3.44 2.98 3.93 4.7zM12 4.05c.83 1.15 1.51 2.86 1.9 4.95H10.1c.39-2.09 1.07-3.8 1.9-4.95zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2s.06 1.34.14 2H4.26zm.82 2h2.95c.11 1.7.44 3.29.98 4.7A7.987 7.987 0 0 1 5.08 16zm2.95-8H5.08a7.987 7.987 0 0 1 3.93-4.7c-.54 1.41-.87 3-.98 4.7zM12 19.95c-.83-1.15-1.51-2.86-1.9-4.95h3.8c-.39 2.09-1.07 3.8-1.9 4.95zM14.34 13H9.66c-.09-.66-.16-1.32-.16-2s.07-1.35.16-2h4.68c.09.65.16 1.32.16 2s-.07 1.34-.16 2zm.32 4.7c.54-1.41.87-3 .98-4.7h2.95a7.987 7.987 0 0 1-3.93 4.7zM16.36 14c.08-.66.14-1.32.14-2s-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"></path></svg>
+        </div>
+        <span class="timeline-year">1989</span>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-tag">Encuentro nacional</div>
+        <h3 class="timeline-titulo">Primer Encuentro Nacional de Casas de Gobierno Provinciales</h3>
+        <p class="timeline-desc">El 10 y 11 de noviembre de 1989, la Comisión Vecinal convocó en la Plaza del Barrio a las casas de gobierno de Catamarca, La Rioja y Jujuy junto con delegaciones de otras siete provincias, en el Día de la Tradición. El viernes superó las expectativas de público; el sábado debió suspenderse por lluvia. Meses de gestiones ante el gobernador, ministerios, sindicatos y comercios del barrio quedaron documentados en la correspondencia de la época.</p>
+        <a href="/historia/fiesta-tradicion-1989.html"
+           style="display:inline-flex;align-items:center;gap:8px;margin-top:16px;background:var(--azul-profundo);color:var(--blanco);padding:10px 18px;border-radius:999px;font-size:13px;font-weight:700;text-decoration:none;box-shadow:0 4px 12px -4px rgba(27,58,92,0.3);">
+          Ver el archivo completo →
+        </a>
+      </div>
+    </div>
+
+    <!-- 2009 -->
+    <div class="timeline-item">
+      <div class="timeline-empty"></div>
+      <div class="timeline-dot">
+        <div class="timeline-dot-circle">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"></path></svg>
+        </div>
+        <span class="timeline-year">2009</span>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-tag">Institucional</div>
+        <h3 class="timeline-titulo">Otorgamiento de Personería Jurídica Municipal</h3>
+        <p class="timeline-desc">El Decreto Municipal Nº 5782 otorga la Personería Jurídica Municipal al Centro Vecinal bajo el número 0120. El reconocimiento formal consolida décadas de organización vecinal.</p>
+      </div>
+    </div>
+
+    <!-- 2025 -->
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <div class="timeline-tag">Presente</div>
+        <h3 class="timeline-titulo">Nueva Comisión Directiva reconocida — mandato 2025-2028</h3>
+        <p class="timeline-desc">La Resolución Nº 284 de septiembre de 2025 reconoce a la nueva Comisión Directiva con mandato por tres años. Se inicia un proceso de relanzamiento de la presencia institucional del Centro Vecinal en el barrio.</p>
+      </div>
+      <div class="timeline-dot">
+        <div class="timeline-dot-circle">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path></svg>
+        </div>
+        <span class="timeline-year">2025</span>
+      </div>
+      <div class="timeline-empty"></div>
+    </div>
+
+    <!-- PENDIENTE: más hitos -->
+    <div class="timeline-item">
+      <div class="timeline-empty"></div>
+      <div class="timeline-dot">
+        <div class="timeline-dot-circle pendiente">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg>
+        </div>
+        <span class="timeline-year pendiente">¿Vos sabés?</span>
+      </div>
+      <div class="timeline-content pendiente">
+        <div class="pendiente-badge">Pendiente</div>
+        <h3 class="timeline-titulo pendiente">Hitos entre 1964 y 2009 que esperan ser documentados</h3>
+        <p class="timeline-desc">¿Recordás algún evento importante del barrio? ¿Tenés fotos antiguas, documentos, o conocés a vecinos fundadores? Cada aporte suma a construir la historia colectiva de Ameghino Sur.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- COMISIÓN 1981 -->
+<section class="fundadores-section">
+  <div class="fundadores-inner">
+    <div class="fundadores-header">
+      <div class="fundadores-eyebrow">Documento histórico</div>
+      <h2 class="fundadores-titulo">La comisión del <em>26 de julio de 1981.</em></h2>
+      <p class="fundadores-lead">El acta de la reunión fundacional registra a los ocho delegados elegidos por los vecinos. Son la continuidad directa de lo que hoy es el Centro Vecinal Bº Ameghino Sur.</p>
+    </div>
+
+    <div class="comision-1981">
+      <div class="comision-1981-titulo">Comisión elegida el 26 de julio de 1981</div>
+      <div class="comision-1981-lista">
+        <div class="comision-1981-item"><strong>José Jiménez</strong> — Coordinador · Fleming 121</div>
+        <div class="comision-1981-item"><strong>Vicente Jaime</strong> — Delegado · M.P. Cabrera 3377</div>
+        <div class="comision-1981-item"><strong>Eduardo Biassi</strong> — Delegado · Av. F. Aérea 3001</div>
+        <div class="comision-1981-item"><strong>Justo Rigotti</strong> — Delegado · Graham Bell 177</div>
+        <div class="comision-1981-item"><strong>Manuel Ibarra</strong> — Delegado · Graham Bell 475</div>
+        <div class="comision-1981-item"><strong>Carlos Luna</strong> — Delegado · M.P. Cabrera 3125</div>
+        <div class="comision-1981-item"><strong>Juan Fontana</strong> — Delegado · Las Rosas 2944</div>
+        <div class="comision-1981-item"><strong>Walter Martini</strong> — Delegado · Uritorco 2865</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- APORTÁ TU HISTORIA -->
+<section class="aportar-section">
+  <div class="aportar-inner">
+    <div class="aportar-icono">
+      <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path></svg>
+    </div>
+    <h2 class="aportar-titulo">¿Tenés fotos, documentos o recuerdos del <em>barrio?</em></h2>
+    <p class="aportar-texto">Esta historia se construye entre todos. Si tenés fotos antiguas, recortes periodísticos, actas, o simplemente recordás algo importante que pasó en el barrio, escribinos por WhatsApp. Cada aporte ayuda a preservar la memoria de Ameghino Sur.</p>
+    <a href="https://wa.me/5493513763757?text=Hola%2C%20quiero%20aportar%20algo%20a%20la%20historia%20del%20barrio%20Ameghino%20Sur." target="_blank" rel="noopener" class="aportar-btn">
+      <svg viewBox="0 0 24 24"><path d="M17.498 14.382c-.301-.15-1.767-.867-2.04-.966-.273-.101-.473-.15-.673.15-.197.295-.771.964-.944 1.162-.175.195-.349.21-.646.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.77-1.66-2.07-.174-.3-.019-.465.13-.615.136-.135.301-.345.451-.523.146-.181.194-.301.297-.496.1-.21.049-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172-.015-.371-.015-.571-.015-.2 0-.523.074-.797.359-.273.3-1.045 1.02-1.045 2.475s1.07 2.865 1.219 3.075c.149.195 2.105 3.195 5.1 4.485.714.3 1.27.48 1.704.629.714.227 1.365.195 1.88.121.574-.091 1.767-.721 2.016-1.426.255-.705.255-1.29.18-1.425-.074-.135-.27-.21-.57-.345m-5.446 7.443h-.016c-1.77 0-3.524-.48-5.055-1.38l-.36-.214-3.75.975 1.005-3.645-.239-.375c-.99-1.576-1.516-3.391-1.516-5.26 0-5.445 4.455-9.885 9.942-9.885 2.654 0 5.145 1.035 7.021 2.91 1.875 1.859 2.909 4.35 2.909 6.99-.004 5.444-4.46 9.885-9.935 9.885"></path></svg>
+      Compartir por WhatsApp
+    </a>
+    <p class="aportar-nota">También podés acercarte a la sede del Centro Vecinal en Aconcagua 4078.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-mini">
+    <span>© 2026 Centro Vecinal Bº Ameghino Sur · Personería Municipal Nº 0120</span>
+    <a href="https://cvameghinosur.com.ar/">Volver al inicio</a>
+  </div>
+</footer>
+</body>
+</html>

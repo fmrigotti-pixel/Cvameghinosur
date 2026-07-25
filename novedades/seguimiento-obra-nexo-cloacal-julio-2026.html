@@ -87,6 +87,12 @@
   .dato-clave-valor { font-size: 16px; color: var(--gris-texto); line-height: 1.5; }
   .dato-clave-valor strong { color: var(--azul-profundo); }
 
+  .foto-principal { width: 100%; height: auto; border-radius: 10px; margin: 8px 0 8px; display: block; box-shadow: 0 4px 18px rgba(27,58,92,0.12); }
+  .galeria { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 28px 0; }
+  .galeria img { width: 100%; height: auto; border-radius: 8px; display: block; box-shadow: 0 2px 10px rgba(27,58,92,0.10); }
+  @media (max-width: 600px) { .galeria { grid-template-columns: 1fr; } }
+  .foto-caption { font-size: 0.82rem; color: var(--gris-medio); text-align: center; margin-bottom: 24px; }
+
   .etapas { margin: 28px 0; }
   .etapa-item { display: flex; gap: 20px; position: relative; padding-bottom: 26px; }
   .etapa-item:not(:last-child)::after { content:''; position:absolute; left:19px; top:40px; bottom:0; width:2px; background: var(--gris-claro); }
@@ -175,6 +181,9 @@
         Esta semana, integrantes de nuestra Comisión Directiva visitaron la obra que se está ejecutando sobre la Avenida Fuerza Aérea, entre calle Espora y el Geriátrico de la Fuerza Aérea. Según informó el Gobierno de la Provincia de Córdoba, se trata de un refuerzo del sistema cloacal troncal que incluye más de <strong>6,4 kilómetros de nuevas conducciones</strong> y la rehabilitación de redes existentes en el sector. Esta obra es clave porque es esencial para que llegue la infraestructura troncal al barrio.
       </p>
 
+      <img src="/img/novedades/seguimiento-obra-nexo-cloacal-julio-2026/foto-principal.jpg" alt="Integrantes de la Comisión Directiva del Centro Vecinal Bº Ameghino Sur observando la obra del Nexo Cloacal en Av. Fuerza Aérea" class="foto-principal">
+      <p class="foto-caption">Durante la recorrida por la obra, Av. Fuerza Aérea</p>
+
       <div class="dato-clave">
         <div class="dato-clave-label">La obra</div>
         <div class="dato-clave-valor">
@@ -186,6 +195,12 @@
       <p>
         Durante la recorrida, la Comisión Directiva se interiorizó sobre el estado general de los trabajos, a fin de contar con información propia y actualizada sobre una obra que sigue de cerca desde hace tiempo.
       </p>
+
+      <div class="galeria">
+        <img src="/img/novedades/seguimiento-obra-nexo-cloacal-julio-2026/foto-01.jpg" alt="Caños de la nueva conducción cloacal acopiados sobre la vereda de Av. Fuerza Aérea">
+        <img src="/img/novedades/seguimiento-obra-nexo-cloacal-julio-2026/foto-02.jpg" alt="Zanja de la obra del Nexo Cloacal con caño de gran diámetro en instalación">
+      </div>
+      <p class="foto-caption">Los trabajos sobre Av. Fuerza Aérea</p>
 
       <h2>Un reclamo de 45 años</h2>
 

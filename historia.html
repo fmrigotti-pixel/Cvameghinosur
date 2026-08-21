@@ -356,6 +356,14 @@
     .fundadores-section { padding: 56px 0; }
     .aportar-section { padding: 56px 0; }
   }
+  .recorte-grid { grid-template-columns: 1fr 1fr; }
+  .participantes-grid { grid-template-columns: 1fr 1fr; }
+  @media (max-width: 900px) {
+    .recorte-grid { grid-template-columns: 1fr; gap: 40px; }
+  }
+  @media (max-width: 420px) {
+    .participantes-grid { grid-template-columns: 1fr; }
+  }
 </style>
 </head>
 <body>
@@ -398,7 +406,7 @@
       <p style="font-size:15px;color:var(--gris-medio);margin-top:12px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6;">Un recorte periodístico de la década de 1990 — fecha exacta no confirmada — documenta la historia del barrio y la visión de la organización vecinal en palabras de sus propios integrantes.</p>
     </div>
 
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;">
+    <div class="recorte-grid" style="display:grid;gap:64px;align-items:start;">
 
       <!-- Imagen -->
       <div>
@@ -459,7 +467,7 @@
         <div style="background:var(--azul-profundo);border-radius:4px;padding:28px;">
           <div style="font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--dorado);margin-bottom:6px;">Participaron en esta nota</div>
           <div style="font-size:12px;color:rgba(255,255,255,0.5);margin-bottom:18px;">Comisión Vecinal de Barrio Ameghino Sur · Reunión informativa 26/07/81<br>Presidente: Don José Jiménez</div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px 24px;">
+          <div class="participantes-grid" style="display:grid;gap:8px 24px;">
             <div style="font-size:13px;color:rgba(255,255,255,0.85);">Justo M. Rigotti</div>
             <div style="font-size:13px;color:rgba(255,255,255,0.85);">Carlos H. Luna</div>
             <div style="font-size:13px;color:rgba(255,255,255,0.85);">Héctor Ibarra</div>

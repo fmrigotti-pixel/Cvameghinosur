@@ -162,6 +162,26 @@
     .antecedente-fecha { width: auto; }
     .firma { padding: 28px 24px; }
   }
+
+  /* Carrusel Plan Familiar */
+  .carrusel-wrap { position: relative; margin: 26px 0 12px; }
+  .carrusel { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 16px; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; padding-bottom: 4px; }
+  .carrusel::-webkit-scrollbar { height: 6px; }
+  .carrusel::-webkit-scrollbar-track { background: rgba(27,58,92,0.06); border-radius: 3px; }
+  .carrusel::-webkit-scrollbar-thumb { background: rgba(27,58,92,0.25); border-radius: 3px; }
+  .carrusel-slide { flex: 0 0 100%; scroll-snap-align: center; }
+  .carrusel-slide img { width: 100%; height: auto; border-radius: 8px; display: block; box-shadow: 0 6px 20px -6px rgba(27,58,92,0.25); }
+  .carrusel-btn { position: absolute; top: 50%; transform: translateY(-50%); width: 46px; height: 46px; border-radius: 50%; background: rgba(27,58,92,0.9); border: none; color: #fff; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 5; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+  .carrusel-btn:hover { background: var(--azul-profundo); }
+  .carrusel-btn svg { width: 26px; height: 26px; fill: currentColor; }
+  .carrusel-btn.prev { left: -12px; }
+  .carrusel-btn.next { right: -12px; }
+  .carrusel-dots { display: flex; justify-content: center; gap: 8px; margin-bottom: 26px; }
+  .carrusel-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(27,58,92,0.22); border: none; padding: 0; cursor: pointer; transition: all 0.2s; }
+  .carrusel-dot.activo { background: var(--dorado); width: 24px; border-radius: 4px; }
+  @media (max-width: 600px) {
+    .carrusel-btn { display: none; }
+  }
 </style>
 </head>
 <body>
@@ -295,16 +315,25 @@
       </a>
 
       <h3 id="plan-familiar" style="margin-top:56px;">Plan Familiar de Prevención</h3>
-      <p>Seis cuidados simples para tener en cuenta en casa, con fotos reales del estado del barrio. Podés compartir cualquiera de estas imágenes por separado en WhatsApp.</p>
+      <p>Seis cuidados simples para tener en cuenta en casa, con fotos reales del estado del barrio. Deslizá para verlas todas — podés guardar o compartir cualquiera por WhatsApp.</p>
 
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:24px 0;">
-        <img src="/img/novedades/nota-preventiva-defensa-civil-el-nino-2026/plan-prevencion-portada.jpg" alt="Plan Familiar de Prevención — portada" style="width:100%;border-radius:6px;display:block;box-shadow:0 2px 10px rgba(27,58,92,0.10);">
-        <img src="/img/novedades/nota-preventiva-defensa-civil-el-nino-2026/plan-prevencion-antes.jpg" alt="Antes de la lluvia: revisá techo y desagües" style="width:100%;border-radius:6px;display:block;box-shadow:0 2px 10px rgba(27,58,92,0.10);">
-        <img src="/img/novedades/nota-preventiva-defensa-civil-el-nino-2026/plan-prevencion-durante.jpg" alt="Con lluvia fuerte: cortes de luz, compuertas, objetos elevados" style="width:100%;border-radius:6px;display:block;box-shadow:0 2px 10px rgba(27,58,92,0.10);">
-        <img src="/img/novedades/nota-preventiva-defensa-civil-el-nino-2026/plan-prevencion-calle.jpg" alt="En la calle: veredas y tapas de desagüe faltantes" style="width:100%;border-radius:6px;display:block;box-shadow:0 2px 10px rgba(27,58,92,0.10);">
-        <img src="/img/novedades/nota-preventiva-defensa-civil-el-nino-2026/plan-prevencion-evidencia.jpg" alt="Registro fotográfico real del estado de calles y veredas del barrio" style="width:100%;border-radius:6px;display:block;box-shadow:0 2px 10px rgba(27,58,92,0.10);">
-        <img src="/img/novedades/nota-preventiva-defensa-civil-el-nino-2026/plan-prevencion-vecinos.jpg" alt="Entre vecinos: cuidado de mayores y números útiles" style="width:100%;border-radius:6px;display:block;box-shadow:0 2px 10px rgba(27,58,92,0.10);">
+      <div class="carrusel-wrap">
+        <div class="carrusel" id="carrusel">
+          <div class="carrusel-slide"><img src="/img/novedades/nota-preventiva-defensa-civil-el-nino-2026/plan-prevencion-portada.jpg" alt="Plan Familiar de Prevención — portada"></div>
+          <div class="carrusel-slide"><img src="/img/novedades/nota-preventiva-defensa-civil-el-nino-2026/plan-prevencion-antes.jpg" alt="Antes de la lluvia: revisá techo y desagües"></div>
+          <div class="carrusel-slide"><img src="/img/novedades/nota-preventiva-defensa-civil-el-nino-2026/plan-prevencion-durante.jpg" alt="Con lluvia fuerte: cortes de luz, compuertas, objetos elevados"></div>
+          <div class="carrusel-slide"><img src="/img/novedades/nota-preventiva-defensa-civil-el-nino-2026/plan-prevencion-calle.jpg" alt="En la calle: veredas y tapas de desagüe faltantes"></div>
+          <div class="carrusel-slide"><img src="/img/novedades/nota-preventiva-defensa-civil-el-nino-2026/plan-prevencion-evidencia.jpg" alt="Registro fotográfico real del estado de calles y veredas del barrio"></div>
+          <div class="carrusel-slide"><img src="/img/novedades/nota-preventiva-defensa-civil-el-nino-2026/plan-prevencion-vecinos.jpg" alt="Entre vecinos: cuidado de mayores y números útiles"></div>
+        </div>
+        <button class="carrusel-btn prev" onclick="moverCarrusel(-1)" aria-label="Anterior">
+          <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+        </button>
+        <button class="carrusel-btn next" onclick="moverCarrusel(1)" aria-label="Siguiente">
+          <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+        </button>
       </div>
+      <div class="carrusel-dots" id="carrusel-dots"></div>
 
       <div class="fuentes-box">
         <h4>Fuentes citadas en esta nota</h4>
@@ -360,5 +389,54 @@
   </div>
 </footer>
 
+<script>
+(function(){
+  var car = document.getElementById('carrusel');
+  var dotsWrap = document.getElementById('carrusel-dots');
+  if(!car || !dotsWrap) return;
+  var slides = car.querySelectorAll('.carrusel-slide');
+  var idx = 0;
+
+  for(var i=0;i<slides.length;i++){
+    (function(n){
+      var d = document.createElement('button');
+      d.className = 'carrusel-dot' + (n===0 ? ' activo' : '');
+      d.setAttribute('aria-label','Ir a la lámina ' + (n+1));
+      d.onclick = function(){ irA(n); };
+      dotsWrap.appendChild(d);
+    })(i);
+  }
+
+  function actualizarDots(){
+    var dots = dotsWrap.querySelectorAll('.carrusel-dot');
+    for(var i=0;i<dots.length;i++){
+      dots[i].className = 'carrusel-dot' + (i===idx ? ' activo' : '');
+    }
+  }
+
+  function irA(n){
+    idx = Math.max(0, Math.min(slides.length-1, n));
+    car.scrollTo({ left: slides[idx].offsetLeft - car.offsetLeft, behavior: 'smooth' });
+    actualizarDots();
+  }
+
+  window.moverCarrusel = function(dir){ irA(idx + dir); };
+
+  var t;
+  car.addEventListener('scroll', function(){
+    clearTimeout(t);
+    t = setTimeout(function(){
+      var pos = car.scrollLeft;
+      var mejor = 0, minDist = Infinity;
+      for(var i=0;i<slides.length;i++){
+        var d = Math.abs((slides[i].offsetLeft - car.offsetLeft) - pos);
+        if(d < minDist){ minDist = d; mejor = i; }
+      }
+      idx = mejor;
+      actualizarDots();
+    }, 90);
+  });
+})();
+</script>
 </body>
 </html>

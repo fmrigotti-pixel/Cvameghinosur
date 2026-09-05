@@ -12,7 +12,7 @@
 <meta property="og:image" content="https://cvameghinosur.com.ar/img/og/og-el-nino-2026.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="El Niño 2026: qué significa para Ameghino Sur">
+<meta property="og:image:alt" content="El Niño 2026: cómo se prepara Ameghino Sur">
 <meta property="og:site_name" content="Centro Vecinal Bº Ameghino Sur">
 <meta property="og:locale" content="es_AR">
 <meta name="twitter:card" content="summary_large_image">
@@ -185,7 +185,8 @@
   }
 
   /* Carrusel Plan Familiar */
-  .carrusel-wrap { position: relative; margin: 26px 0 12px; }
+  .carrusel-outer { width: 100vw; position: relative; left: 50%; margin-left: -50vw; }
+  .carrusel-wrap { position: relative; margin: 26px auto 12px; max-width: 1040px; padding: 0 20px; }
   .carrusel { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 16px; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; padding-bottom: 4px; }
   .carrusel::-webkit-scrollbar { height: 6px; }
   .carrusel::-webkit-scrollbar-track { background: rgba(27,58,92,0.06); border-radius: 3px; }
@@ -202,6 +203,7 @@
   .carrusel-dot.activo { background: var(--dorado); width: 24px; border-radius: 4px; }
   @media (max-width: 600px) {
     .carrusel-btn { display: none; }
+    .carrusel-wrap { padding: 0 10px; }
   }
 </style>
 </head>
@@ -374,6 +376,7 @@
       <h3 id="plan-familiar" style="margin-top:56px;">Plan Familiar de Prevención</h3>
       <p>Seis cuidados simples para tener en cuenta en casa, con fotos reales del estado del barrio. Deslizá para verlas todas — podés guardar o compartir cualquiera por WhatsApp.</p>
 
+      <div class="carrusel-outer">
       <div class="carrusel-wrap">
         <div class="carrusel" id="carrusel">
           <div class="carrusel-slide"><img src="/img/novedades/nota-preventiva-defensa-civil-el-nino-2026/plan-prevencion-portada.jpg" alt="Plan Familiar de Prevención — portada"></div>
@@ -391,6 +394,7 @@
         </button>
       </div>
       <div class="carrusel-dots" id="carrusel-dots"></div>
+      </div>
 
       <div class="fuentes-box">
         <h4>Fuentes citadas en esta nota</h4>

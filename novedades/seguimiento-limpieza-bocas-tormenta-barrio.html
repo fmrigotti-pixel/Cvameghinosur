@@ -127,12 +127,12 @@
   /* GALERÍA DE FOTOS DE CAMPO */
   .foto-galeria { display: grid; gap: 14px; margin: 28px 0; }
   .foto-galeria figure { margin: 0; }
-  .foto-galeria img { width: 100%; border-radius: 8px; display: block; box-shadow: 0 2px 10px rgba(27,58,92,0.10); aspect-ratio: 4/3; object-fit: cover; border: 1px solid rgba(27,58,92,0.08); }
+  .foto-galeria img { width: 100%; height: 340px; border-radius: 8px; display: block; box-shadow: 0 2px 10px rgba(27,58,92,0.10); object-fit: contain; background: var(--crema-oscuro); border: 1px solid rgba(27,58,92,0.08); }
   .foto-galeria figcaption { font-size: 0.82rem; color: var(--gris-medio); text-align: center; margin-top: 8px; }
   @media (min-width: 601px) {
     .foto-galeria { grid-template-columns: 1fr 1fr; }
     .foto-galeria figure:first-child { grid-column: 1 / -1; }
-    .foto-galeria figure:first-child img { aspect-ratio: 16/9; }
+    .foto-galeria figure:first-child img { height: 420px; }
   }
 
   .firma { background: var(--azul-profundo); color: var(--blanco); padding: 40px; border-radius: 4px; display: flex; flex-direction: column; gap: 8px; margin-top: 48px; }

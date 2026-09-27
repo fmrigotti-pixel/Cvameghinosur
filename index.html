@@ -490,8 +490,8 @@
   }
   .quickfacts-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 32px;
     position: relative;
   }
   .qf-item .qf-num {
@@ -514,8 +514,11 @@
     max-width: 200px;
   }
 
-  @media (max-width: 768px) {
-    .quickfacts-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+  @media (max-width: 900px) {
+    .quickfacts-grid { grid-template-columns: repeat(3, 1fr); gap: 32px; }
+  }
+  @media (max-width: 560px) {
+    .quickfacts-grid { grid-template-columns: repeat(2, 1fr); gap: 28px; }
   }
 
   /* === SECCIÓN GENÉRICA === */
@@ -1681,16 +1684,20 @@
         <div class="qf-label">Años de organización vecinal en Ameghino Sur</div>
       </div>
       <div class="qf-item">
-        <div class="qf-num"><em>~</em>3.000</div>
-        <div class="qf-label">Vecinos viven en el barrio</div>
+        <div class="qf-num">3.449</div>
+        <div class="qf-label">Habitantes de Ameghino Sud, según dato oficial de la Provincia</div>
       </div>
       <div class="qf-item">
-        <div class="qf-num">40</div>
+        <div class="qf-num">50</div>
         <div class="qf-label">Manzanas dentro del polígono oficial</div>
       </div>
       <div class="qf-item">
-        <div class="qf-num">1981</div>
-        <div class="qf-label">Año de la primera comisión vecinal</div>
+        <div class="qf-num">3</div>
+        <div class="qf-label">Escuelas en el barrio — jardín, primaria y secundaria</div>
+      </div>
+      <div class="qf-item">
+        <div class="qf-num">2</div>
+        <div class="qf-label">Plazas del barrio</div>
       </div>
     </div>
   </div>

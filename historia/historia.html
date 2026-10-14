@@ -368,6 +368,91 @@
   @media (max-width: 420px) {
     .participantes-grid { grid-template-columns: 1fr; }
   }
+
+  /* ===== HISTORIA POR ÉPOCAS ===== */
+  .hist-controls { background: var(--blanco); border-bottom: 1px solid rgba(27,58,92,0.08); padding: 40px 0 32px; }
+  .hist-controls-inner { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+  .epoca-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 32px; }
+  .epoca-card { display: flex; flex-direction: column; gap: 4px; background: var(--crema); border: 1px solid rgba(27,58,92,0.1); border-top: 3px solid var(--dorado); border-radius: 4px; padding: 16px 16px 14px; text-decoration: none; transition: box-shadow .2s, transform .2s; }
+  .epoca-card:hover { box-shadow: 0 10px 24px -12px rgba(27,58,92,0.25); transform: translateY(-2px); }
+  .epoca-card-doc { border-top-color: var(--azul-profundo); }
+  .epoca-card-anio { font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--dorado); }
+  .epoca-card-nombre { font-family: var(--display); font-weight: 600; font-size: 17px; line-height: 1.15; color: var(--azul-profundo); }
+  .epoca-card-n { font-size: 12px; color: var(--gris-medio); }
+  .filtros-fila { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 12px; }
+  .filtros-label { flex: 0 0 96px; font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gris-medio); padding-top: 9px; }
+  .filtros-grupo { display: flex; flex-wrap: wrap; gap: 8px; }
+  .filtro { font-family: var(--body); font-size: 13px; font-weight: 600; color: var(--azul-profundo); background: var(--blanco); border: 1px solid rgba(27,58,92,0.18); border-radius: 999px; padding: 7px 14px; cursor: pointer; transition: all .15s; }
+  .filtro:hover { border-color: var(--azul-profundo); }
+  .filtro.activo { background: var(--azul-profundo); color: var(--blanco); border-color: var(--azul-profundo); }
+  .filtro-n { display: inline-block; min-width: 18px; margin-left: 4px; padding: 1px 6px; border-radius: 999px; background: rgba(27,58,92,0.08); font-size: 11px; font-weight: 700; text-align: center; }
+  .filtro.activo .filtro-n { background: rgba(255,255,255,0.2); }
+  .filtro[disabled] { opacity: .4; cursor: default; }
+  .filtros-nota { font-size: 12px; color: var(--gris-medio); margin-top: 4px; padding-left: 110px; }
+  .epoca { padding: 72px 0 8px; }
+  .epoca.alt { background: var(--blanco); }
+  .epoca-inner { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+  .epoca-head { margin-bottom: 28px; }
+  .epoca-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--dorado); margin-bottom: 8px; }
+  .epoca-titulo { font-family: var(--display); font-weight: 600; font-size: clamp(28px, 4vw, 40px); line-height: 1.05; letter-spacing: -0.02em; color: var(--azul-profundo); margin-bottom: 10px; }
+  .epoca-intro { font-size: 16px; line-height: 1.6; color: var(--gris-medio); max-width: 620px; }
+  .hechos { position: relative; border-top: 1px solid rgba(27,58,92,0.12); margin-bottom: 40px; }
+  .hechos::before { content: ''; position: absolute; top: 0; bottom: 0; left: 134px; width: 2px; background: linear-gradient(to bottom, var(--dorado), rgba(232,160,32,0.35)); }
+  .hecho { position: relative; }
+  .hecho::before { content: ''; position: absolute; left: 127px; top: 36px; width: 16px; height: 16px; border-radius: 50%; background: var(--azul-profundo); border: 3px solid var(--dorado); box-shadow: 0 0 0 4px var(--crema); z-index: 1; }
+  .epoca.alt .hecho::before { box-shadow: 0 0 0 4px var(--blanco); }
+  .hueco { position: relative; }
+  .hueco::before { content: ''; position: absolute; left: 127px; top: 30px; width: 16px; height: 16px; border-radius: 50%; background: var(--crema); border: 3px dashed rgba(27,58,92,0.35); z-index: 1; }
+  .epoca.alt .hueco::before { background: var(--blanco); }
+  .hecho-body, .hueco-body { padding-left: 24px; }
+  .regla { overflow-x: auto; margin: 0 0 28px; padding: 4px 0 14px; }
+  .regla-linea { position: relative; display: flex; align-items: flex-start; gap: 0; min-width: max-content; padding: 0 8px; }
+  .regla-linea::before { content: ''; position: absolute; left: 0; right: 0; top: 11px; height: 2px; background: linear-gradient(to right, var(--dorado), rgba(232,160,32,0.4)); }
+  .regla-pto { position: relative; display: flex; flex-direction: column; align-items: center; gap: 6px; text-decoration: none; padding: 0 10px; }
+  .regla-dot { width: 14px; height: 14px; border-radius: 50%; background: var(--azul-profundo); border: 3px solid var(--dorado); box-shadow: 0 0 0 3px var(--blanco); z-index: 1; transition: transform .15s; }
+  .regla-pto:hover .regla-dot { transform: scale(1.25); }
+  .regla-y { font-family: var(--display); font-weight: 700; font-size: 13px; color: var(--azul-profundo); }
+  .regla-pto.oculto { opacity: .25; pointer-events: none; }
+  .regla-corte { width: 36px; height: 14px; flex: none; position: relative; z-index: 1; background: repeating-linear-gradient(to right, var(--blanco) 0 5px, transparent 5px 10px); }
+  .hecho { scroll-margin-top: 90px; }
+  .hecho { display: grid; grid-template-columns: 120px 1fr; gap: 28px; padding: 28px 0; border-bottom: 1px solid rgba(27,58,92,0.12); }
+  .hecho[hidden], .hueco[hidden], .epoca[hidden] { display: none; }
+  .hecho-year { font-family: var(--display); font-weight: 700; font-size: 38px; line-height: 1; letter-spacing: -0.03em; color: var(--azul-profundo); }
+  .hecho-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+  .chip { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 4px 10px; border-radius: 999px; }
+  .chip-tag { background: rgba(232,160,32,0.14); color: #9a6508; }
+  .chip-org { background: rgba(27,58,92,0.07); color: var(--azul-profundo); }
+  .chip-cv { background: var(--azul-profundo); color: var(--blanco); }
+  .chip-co { background: #2f6f5e; color: var(--blanco); }
+  .chip-ve { background: rgba(27,58,92,0.07); color: var(--gris-medio); }
+  .hecho-titulo { font-family: var(--display); font-weight: 600; font-size: 22px; line-height: 1.2; letter-spacing: -0.01em; color: var(--azul-profundo); margin-bottom: 8px; }
+  .hecho-desc { font-size: 15px; line-height: 1.7; color: var(--gris-medio); max-width: 680px; }
+  .hecho-links { display: flex; flex-wrap: wrap; gap: 10px 20px; margin-top: 14px; }
+  .hecho-link { font-size: 13px; font-weight: 700; color: var(--azul-profundo); text-decoration: none; border-bottom: 2px solid var(--dorado); padding-bottom: 1px; }
+  .hecho-link:hover { color: var(--dorado); }
+  .hueco { display: grid; grid-template-columns: 120px 1fr; gap: 28px; padding: 24px 28px; margin-top: 24px; border: 1.5px dashed rgba(27,58,92,0.25); border-radius: 6px; background: rgba(232,160,32,0.05); }
+  .hueco-year { font-family: var(--display); font-weight: 600; font-size: 18px; line-height: 1.2; color: var(--gris-medio); }
+  .hueco-titulo { font-family: var(--display); font-weight: 600; font-size: 18px; color: var(--azul-profundo); margin-bottom: 4px; }
+  .hueco-body p { font-size: 14px; color: var(--gris-medio); line-height: 1.6; }
+  .hueco-link { display: inline-block; margin-top: 10px; font-size: 13px; font-weight: 700; color: var(--azul-profundo); text-decoration: none; border-bottom: 2px solid var(--dorado); }
+  .sin-resultados { max-width: 960px; margin: 40px auto; padding: 0 24px; font-size: 15px; color: var(--gris-medio); text-align: center; }
+  .sin-resultados[hidden] { display: none; }
+  #documento-destacado { scroll-margin-top: 80px; }
+  @media (max-width: 900px) { .epoca-cards { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 640px) {
+    .epoca { padding-top: 48px; }
+    .hecho, .hueco { grid-template-columns: 1fr; gap: 10px; padding-left: 32px; }
+    .hechos::before { left: 7px; }
+    .hecho::before { left: 0; top: 34px; }
+    .hueco::before { left: 0; top: 28px; }
+    .hecho-body, .hueco-body { padding-left: 0; }
+    .hecho-year { font-size: 30px; }
+    .filtros-fila { flex-direction: column; gap: 6px; }
+    .filtros-label { flex: none; padding-top: 0; }
+    .filtros-nota { padding-left: 0; }
+    .hueco { padding: 20px; }
+  }
+  @media (max-width: 420px) { .epoca-cards { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -394,14 +479,193 @@
     <p class="page-lead">La memoria de Ameghino Sur construida entre todos. Esta página crece con los aportes de vecinos, documentos históricos y registros de la organización comunitaria.</p>
     <div class="aviso-construccion">
       <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg>
-      Esta página está en construcción permanente. Los hitos marcados como "pendiente" esperan aportes de vecinos con información, fotos o documentos históricos.
+      Esta página está en construcción permanente. Los períodos sin hechos documentados esperan aportes de vecinos con información, fotos o documentos históricos.
     </div>
   </div>
 </div>
 
-<!-- INTRO: ORIGEN DEL NOMBRE -->
+
+<!-- ÍNDICE POR ÉPOCAS Y FILTROS -->
+<section class="hist-controls">
+  <div class="hist-controls-inner">
+    <div class="epoca-cards">
+      <a class="epoca-card" href="#origenes"><span class="epoca-card-anio">1950s – 1960s</span><span class="epoca-card-nombre">Orígenes</span><span class="epoca-card-n">3 hechos</span></a>
+      <a class="epoca-card" href="#organizacion"><span class="epoca-card-anio">1981 – década de 1990</span><span class="epoca-card-nombre">Organización y logros</span><span class="epoca-card-n">7 hechos</span></a>
+      <a class="epoca-card" href="#reconocimiento"><span class="epoca-card-anio">2009 – hoy</span><span class="epoca-card-nombre">Reconocimiento y presente</span><span class="epoca-card-n">2 hechos</span></a>
+      <a class="epoca-card epoca-card-doc" href="#documento-destacado"><span class="epoca-card-anio">Documentos</span><span class="epoca-card-nombre">El barrio en sus propias palabras</span><span class="epoca-card-n">Recorte y fotos históricas</span></a>
+    </div>
+    <nav class="regla" aria-label="Línea de tiempo: ir a un año"><div class="regla-linea"><a class="regla-pto" href="#h1" data-ref="h1"><span class="regla-dot"></span><span class="regla-y">1950s</span></a><a class="regla-pto" href="#h2" data-ref="h2"><span class="regla-dot"></span><span class="regla-y">1953</span></a><a class="regla-pto" href="#h3" data-ref="h3"><span class="regla-dot"></span><span class="regla-y">1964</span></a><span class="regla-corte" aria-hidden="true"></span><a class="regla-pto" href="#h4" data-ref="h4"><span class="regla-dot"></span><span class="regla-y">1981</span></a><a class="regla-pto" href="#h5" data-ref="h5"><span class="regla-dot"></span><span class="regla-y">1984</span></a><a class="regla-pto" href="#h6" data-ref="h6"><span class="regla-dot"></span><span class="regla-y">1988</span></a><a class="regla-pto" href="#h7" data-ref="h7"><span class="regla-dot"></span><span class="regla-y">1989</span></a><a class="regla-pto" href="#h8" data-ref="h8"><span class="regla-dot"></span><span class="regla-y">1989</span></a><a class="regla-pto" href="#h9" data-ref="h9"><span class="regla-dot"></span><span class="regla-y">1990</span></a><a class="regla-pto" href="#h10" data-ref="h10"><span class="regla-dot"></span><span class="regla-y">1990s</span></a><span class="regla-corte" aria-hidden="true"></span><a class="regla-pto" href="#h11" data-ref="h11"><span class="regla-dot"></span><span class="regla-y">2009</span></a><a class="regla-pto" href="#h12" data-ref="h12"><span class="regla-dot"></span><span class="regla-y">2025</span></a></div></nav>
+    <div class="filtros" aria-label="Filtrar hechos">
+      <div class="filtros-fila"><span class="filtros-label">Tema</span><div class="filtros-grupo" data-grupo-wrap="tema"><button type="button" class="filtro activo" data-grupo="tema" data-valor="" aria-pressed="true">Todos <span class="filtro-n"></span></button><button type="button" class="filtro" data-grupo="tema" data-valor="organizacion" aria-pressed="false">Organización vecinal <span class="filtro-n"></span></button><button type="button" class="filtro" data-grupo="tema" data-valor="educacion" aria-pressed="false">Educación <span class="filtro-n"></span></button><button type="button" class="filtro" data-grupo="tema" data-valor="espacios" aria-pressed="false">Espacios comunes <span class="filtro-n"></span></button><button type="button" class="filtro" data-grupo="tema" data-valor="servicios" aria-pressed="false">Servicios <span class="filtro-n"></span></button><button type="button" class="filtro" data-grupo="tema" data-valor="cultura" aria-pressed="false">Cultura y encuentros <span class="filtro-n"></span></button><button type="button" class="filtro" data-grupo="tema" data-valor="documentos" aria-pressed="false">Documentos <span class="filtro-n"></span></button></div></div>
+      <div class="filtros-fila"><span class="filtros-label">Organización</span><div class="filtros-grupo" data-grupo-wrap="org"><button type="button" class="filtro activo" data-grupo="org" data-valor="" aria-pressed="true">Todas <span class="filtro-n"></span></button><button type="button" class="filtro" data-grupo="org" data-valor="cv" aria-pressed="false">Centro Vecinal <span class="filtro-n"></span></button><button type="button" class="filtro" data-grupo="org" data-valor="co" aria-pressed="false">Comisión Vecinal <span class="filtro-n"></span></button><button type="button" class="filtro" data-grupo="org" data-valor="ve" aria-pressed="false">Vecinos <span class="filtro-n"></span></button></div></div>
+      <p class="filtros-nota">Indicamos qué organización impulsó cada hecho cuando el documento lo aclara; si no, figura como «Vecinos».</p>
+    </div>
+  </div>
+</section>
+<div class="sin-resultados" id="sin-resultados" hidden>No hay hechos con esa combinación de filtros. Probá con otra.</div>
+
+<section class="epoca" id="origenes" data-epoca>
+  <div class="epoca-inner">
+    <div class="epoca-head">
+      <div class="epoca-eyebrow">1950s – 1960s</div>
+      <h2 class="epoca-titulo">Orígenes</h2>
+      <p class="epoca-intro">El barrio comienza a poblarse y aparecen los primeros registros de organización vecinal.</p>
+    </div>
+    <div class="hechos">
+      <article class="hecho" id="h1" data-temas="" data-org="ve" data-y="1950s">
+        <div class="hecho-year">1950s</div>
+        <div class="hecho-body">
+          <div class="hecho-meta"><span class="chip chip-tag">Origen</span><span class="chip chip-org chip-ve">Vecinos</span></div>
+          <h3 class="hecho-titulo">Primeros pobladores y el gran descampado</h3>
+          <p class="hecho-desc">El barrio comienza a poblarse al costado sur de la Ruta 20. Fue conocido como Estación Flores y luego Las Playas antes de adoptar el nombre de Ameghino Sur: un gran descampado con casitas entre calles de tierra.</p>
+          
+        </div>
+      </article>
+      <article class="hecho" id="h2" data-temas="documentos espacios organizacion" data-org="cv" data-y="1953">
+        <div class="hecho-year">1953</div>
+        <div class="hecho-body">
+          <div class="hecho-meta"><span class="chip chip-tag">Documento</span><span class="chip chip-org chip-cv">Centro Vecinal</span></div>
+          <h3 class="hecho-titulo">10 de junio de 1953 — Una carta ofrece un terreno para sede, primeros auxilios y biblioteca</h3>
+          <p class="hecho-desc">Una firma loteadora confirma por escrito al presidente del Centro Vecinal el ofrecimiento de donar 350 m² para la sede, una sala de primeros auxilios y una biblioteca pública.</p>
+          <div class="hecho-links"><a class="hecho-link" href="/historia/terreno-sede-biblioteca-1953.html">Ver el documento completo →</a></div>
+        </div>
+      </article>
+      <article class="hecho" id="h3" data-temas="organizacion" data-org="cv" data-y="1964">
+        <div class="hecho-year">1964</div>
+        <div class="hecho-body">
+          <div class="hecho-meta"><span class="chip chip-tag">Organización</span><span class="chip chip-org chip-cv">Centro Vecinal</span></div>
+          <h3 class="hecho-titulo">Don José Jiménez asume la Presidencia del Centro Vecinal</h3>
+          <p class="hecho-desc">José Jiménez, junto a un grupo de vecinos, comienza a organizarse para buscar soluciones a los graves problemas del barrio. La primera tarea fue poner en orden deudas, papelerías e instalaciones del Centro Vecinal.</p>
+          
+        </div>
+      </article>
+      <aside class="hueco" data-hueco>
+        <div class="hueco-year">1965 – 1980</div>
+        <div class="hueco-body">
+          <div class="hueco-titulo">Todavía no tenemos hechos documentados de estos años</div>
+          <p>¿Guardás fotos, actas, recortes o recuerdos de esa época? Ayudanos a completar la historia.</p>
+          <a class="hueco-link" href="https://wa.me/5493513763757?text=Hola%2C%20tengo%20informaci%C3%B3n%20sobre%20el%20barrio%20entre%201965%20y%201980%20y%20quiero%20aportar." target="_blank" rel="noopener">Aportar por WhatsApp →</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="epoca alt" id="organizacion" data-epoca>
+  <div class="epoca-inner">
+    <div class="epoca-head">
+      <div class="epoca-eyebrow">1981 – década de 1990</div>
+      <h2 class="epoca-titulo">Organización y logros</h2>
+      <p class="epoca-intro">Los vecinos se reúnen, gestionan y marcan hitos: la reunión de 1981, las escuelas, la plaza y los encuentros comunitarios.</p>
+    </div>
+    <div class="hechos">
+      <article class="hecho" id="h4" data-temas="organizacion servicios documentos" data-org="co" data-y="1981">
+        <div class="hecho-year">1981</div>
+        <div class="hecho-body">
+          <div class="hecho-meta"><span class="chip chip-tag">Fundacional</span><span class="chip chip-org chip-co">Comisión Vecinal</span></div>
+          <h3 class="hecho-titulo">26 de julio de 1981 — La reunión que organizó al barrio</h3>
+          <p class="hecho-desc">Cerca de 100 vecinos se reúnen en las instalaciones del Centro Vecinal junto a representantes de organismos municipales y provinciales. Cinco problemas críticos, ocho delegados elegidos y un acta firmada.</p>
+          <div class="hecho-links"><a class="hecho-link" href="/historia/reunion-fundacional-1981.html">Leer la historia completa, con acta y delegados →</a><a class="hecho-link" href="/historia/45-anos-reclamo-cloacal.html">Ver los 45 años del reclamo cloacal →</a></div>
+        </div>
+      </article>
+      <article class="hecho" id="h5" data-temas="educacion" data-org="ve" data-y="1984">
+        <div class="hecho-year">1984</div>
+        <div class="hecho-body">
+          <div class="hecho-meta"><span class="chip chip-tag">Educación</span><span class="chip chip-org chip-ve">Vecinos</span></div>
+          <h3 class="hecho-titulo">Apertura del Bachillerato Técnico República Argentina</h3>
+          <p class="hecho-desc">Fruto de años de gestión vecinal, el barrio obtiene el Bachillerato Técnico República Argentina, que comienza a funcionar en marzo de 1984.</p>
+          
+        </div>
+      </article>
+      <article class="hecho" id="h6" data-temas="cultura espacios documentos" data-org="co" data-y="1988">
+        <div class="hecho-year">1988</div>
+        <div class="hecho-body">
+          <div class="hecho-meta"><span class="chip chip-tag">Comunidad</span><span class="chip chip-org chip-co">Comisión Vecinal</span></div>
+          <h3 class="hecho-titulo">Gran Peña Familiar en la Plaza del Barrio</h3>
+          <p class="hecho-desc">El 30 de diciembre de 1988, la Comisión Vecinal organizó una peña con entrada libre y gratuita en la Plaza del Barrio: seis artistas, folklore, chamamé y humor. El programa de mano se conserva como documento.</p>
+          <div class="hecho-links"><a class="hecho-link" href="/historia/pena-familiar-1988.html">Ver el archivo completo →</a></div>
+        </div>
+      </article>
+      <article class="hecho" id="h7" data-temas="educacion documentos" data-org="co" data-y="1989">
+        <div class="hecho-year">1989</div>
+        <div class="hecho-body">
+          <div class="hecho-meta"><span class="chip chip-tag">Educación</span><span class="chip chip-org chip-co">Comisión Vecinal</span></div>
+          <h3 class="hecho-titulo">Edificio propio para el jardín de infantes República Argentina</h3>
+          <p class="hecho-desc">El 4 de mayo de 1989 se inauguró el edificio propio del prejardín y jardín de infantes, en Ortiz esquina Uritorco. Se gestionó junto a la cooperadora escolar y la Comisión Vecinal.</p>
+          <div class="hecho-links"><a class="hecho-link" href="/historia/jardin-infantes-1989.html">Ver el archivo completo →</a></div>
+        </div>
+      </article>
+      <article class="hecho" id="h8" data-temas="cultura espacios documentos" data-org="co" data-y="1989">
+        <div class="hecho-year">1989</div>
+        <div class="hecho-body">
+          <div class="hecho-meta"><span class="chip chip-tag">Encuentro</span><span class="chip chip-org chip-co">Comisión Vecinal</span></div>
+          <h3 class="hecho-titulo">Primer Encuentro Nacional de Casas de Gobierno Provinciales</h3>
+          <p class="hecho-desc">El 10 y 11 de noviembre de 1989, la Comisión Vecinal convocó en la Plaza del Barrio a las casas de gobierno de Catamarca, La Rioja y Jujuy y a delegaciones de otras siete provincias, en el Día de la Tradición.</p>
+          <div class="hecho-links"><a class="hecho-link" href="/historia/fiesta-tradicion-1989.html">Ver el archivo completo →</a></div>
+        </div>
+      </article>
+      <article class="hecho" id="h9" data-temas="educacion documentos" data-org="ve" data-y="1990">
+        <div class="hecho-year">1990</div>
+        <div class="hecho-body">
+          <div class="hecho-meta"><span class="chip chip-tag">Educación</span><span class="chip chip-org chip-ve">Vecinos</span></div>
+          <h3 class="hecho-titulo">Tierras aprobadas para la escuela secundaria República Argentina</h3>
+          <p class="hecho-desc">En octubre de 1990, la Legislatura de Córdoba aprobó la expropiación de tres lotes de terreno para construir la escuela secundaria y bachillerato técnico, con obra prevista para 1991.</p>
+          <div class="hecho-links"><a class="hecho-link" href="/historia/escuela-secundaria-1990.html">Ver el archivo completo →</a></div>
+        </div>
+      </article>
+      <article class="hecho" id="h10" data-temas="documentos organizacion" data-org="cv" data-y="1990s">
+        <div class="hecho-year">1990s</div>
+        <div class="hecho-body">
+          <div class="hecho-meta"><span class="chip chip-tag">Publicación</span><span class="chip chip-org chip-cv">Centro Vecinal</span></div>
+          <h3 class="hecho-titulo">«Escuela de Vecinalismo»: el barrio en sus propias palabras</h3>
+          <p class="hecho-desc">Un recorte periodístico, de fecha exacta no confirmada, recoge la historia del barrio y la visión de la organización vecinal.</p>
+          <div class="hecho-links"><a class="hecho-link" href="#documento-destacado">Leer la transcripción →</a></div>
+        </div>
+      </article>
+      <aside class="hueco" data-hueco>
+        <div class="hueco-year">1991 – 2008</div>
+        <div class="hueco-body">
+          <div class="hueco-titulo">Buscamos más documentos de estos años</div>
+          <p>Fotos, actas, notas de gestión o recuerdos: cada aporte suma a la historia colectiva.</p>
+          <a class="hueco-link" href="https://wa.me/5493513763757?text=Hola%2C%20tengo%20informaci%C3%B3n%20sobre%20el%20barrio%20entre%201991%20y%202008%20y%20quiero%20aportar." target="_blank" rel="noopener">Aportar por WhatsApp →</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="epoca" id="reconocimiento" data-epoca>
+  <div class="epoca-inner">
+    <div class="epoca-head">
+      <div class="epoca-eyebrow">2009 – hoy</div>
+      <h2 class="epoca-titulo">Reconocimiento y presente</h2>
+      <p class="epoca-intro">El Centro Vecinal obtiene reconocimiento formal y una nueva Comisión Directiva inicia un proceso de relanzamiento.</p>
+    </div>
+    <div class="hechos">
+      <article class="hecho" id="h11" data-temas="organizacion" data-org="cv" data-y="2009">
+        <div class="hecho-year">2009</div>
+        <div class="hecho-body">
+          <div class="hecho-meta"><span class="chip chip-tag">Institucional</span><span class="chip chip-org chip-cv">Centro Vecinal</span></div>
+          <h3 class="hecho-titulo">Otorgamiento de Personería Jurídica Municipal</h3>
+          <p class="hecho-desc">El Decreto Municipal Nº 5782 otorga la Personería Jurídica Municipal al Centro Vecinal bajo el número 0120. El reconocimiento formal consolida décadas de organización vecinal.</p>
+          
+        </div>
+      </article>
+      <article class="hecho" id="h12" data-temas="organizacion" data-org="cv" data-y="2025">
+        <div class="hecho-year">2025</div>
+        <div class="hecho-body">
+          <div class="hecho-meta"><span class="chip chip-tag">Presente</span><span class="chip chip-org chip-cv">Centro Vecinal</span></div>
+          <h3 class="hecho-titulo">Nueva Comisión Directiva reconocida — mandato 2025-2028</h3>
+          <p class="hecho-desc">La Resolución Nº 284 de septiembre de 2025 reconoce a la nueva Comisión Directiva con mandato por tres años. Se inicia un proceso de relanzamiento de la presencia institucional del Centro Vecinal en el barrio.</p>
+          
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
 <!-- RECORTE PERIODÍSTICO -->
-<section style="background:var(--crema-oscuro);padding:80px 0;border-top:1px solid rgba(27,58,92,0.06);">
+<section id="documento-destacado" style="background:var(--crema-oscuro);padding:80px 0;border-top:1px solid rgba(27,58,92,0.06);">
   <div style="max-width:var(--max-w);margin:0 auto;padding:0 24px;">
 
     <div style="text-align:center;margin-bottom:56px;">
@@ -490,291 +754,6 @@
   </div>
 </section>
 
-<!-- LÍNEA DE TIEMPO -->
-<section class="timeline-section">
-  <div class="timeline-header">
-    <div class="section-eyebrow">Cronología</div>
-    <h2 class="section-title">Más de 60 años de <em>organización vecinal.</em></h2>
-  </div>
-
-  <div class="timeline">
-
-    <!-- 1950s -->
-    <div class="timeline-item">
-      <div class="timeline-content">
-        <div class="timeline-tag">Origen</div>
-        <h3 class="timeline-titulo">Primeros pobladores y el gran descampado</h3>
-        <p class="timeline-desc">El barrio comienza a poblarse al costado sur de la Ruta 20. Era conocido sucesivamente como Estación Flores y Las Playas antes de adoptar el nombre definitivo de Ameghino Sur. Un gran descampado con casitas entre calles de tierra.</p>
-      </div>
-      <div class="timeline-dot">
-        <div class="timeline-dot-circle">
-          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg>
-        </div>
-        <span class="timeline-year">1950s</span>
-      </div>
-      <div class="timeline-empty"></div>
-    </div>
-
-    <!-- 1953 -->
-    <div class="timeline-item">
-      <div class="timeline-empty"></div>
-      <div class="timeline-dot">
-        <div class="timeline-dot-circle">
-          <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"></path></svg>
-        </div>
-        <span class="timeline-year">1953</span>
-      </div>
-      <div class="timeline-content">
-        <div class="timeline-tag">Documento</div>
-        <h3 class="timeline-titulo">10 de junio de 1953 — Una carta ofrece un terreno para sede, primeros auxilios y biblioteca</h3>
-        <p class="timeline-desc">Una firma loteadora confirma por escrito al presidente del Centro Vecinal el ofrecimiento de donar 350 m² en Barrio Ameghino para tres usos comunitarios: la sede, una sala de primeros auxilios y una biblioteca pública. Es uno de los registros más antiguos de la organización vecinal.</p>
-        <a href="/historia/terreno-sede-biblioteca-1953.html"
-           style="display:inline-flex;align-items:center;gap:8px;margin-top:16px;background:var(--azul-profundo);color:var(--blanco);padding:10px 18px;border-radius:999px;font-size:13px;font-weight:700;text-decoration:none;box-shadow:0 4px 12px -4px rgba(27,58,92,0.4);">
-          Ver el documento completo →
-        </a>
-      </div>
-    </div>
-
-    <!-- 1964 -->
-    <div class="timeline-item">
-      <div class="timeline-empty"></div>
-      <div class="timeline-dot">
-        <div class="timeline-dot-circle">
-          <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"></path></svg>
-        </div>
-        <span class="timeline-year">1964</span>
-      </div>
-      <div class="timeline-content">
-        <div class="timeline-tag">Organización</div>
-        <h3 class="timeline-titulo">Don José Jiménez asume la Presidencia del Centro Vecinal</h3>
-        <p class="timeline-desc">José Jiménez, junto a un grupo de vecinos, comienza a organizarse para buscar soluciones a los graves problemas del barrio. La primera tarea fue poner en orden deudas, papelerías e instalaciones del Centro Vecinal. Luego se encararon las necesidades más apremiantes.</p>
-      </div>
-    </div>
-
-    <!-- 1981 -->
-    <div class="timeline-item">
-      <div class="timeline-content">
-        <div class="timeline-tag">Fundacional</div>
-        <h3 class="timeline-titulo">26 de julio de 1981 — La reunión que organizó al barrio</h3>
-        <p class="timeline-desc">Aproximadamente 100 vecinos se reúnen en las instalaciones del Centro Vecinal junto al Sr. E. Bazán (Coordinador Zonal de Centros Vecinales) y el Sr. Bertea (Dirección Provincial de Hidráulica). El barrio enfrentaba cinco problemas críticos que ningún vecino podía resolver solo. Ese día eligieron ocho delegados, firmaron un acta y le dieron mandato formal a la organización que hoy continúa el Centro Vecinal.</p>
-
-        <!-- Video -->
-        <div style="margin-top:20px;border-radius:4px;overflow:hidden;background:var(--azul-oscuro);">
-          <iframe
-            src="https://www.youtube.com/embed/AFjqkoT93KE"
-            title="Acta de Fundación — Reunión Vecinal Ameghino Sur, 26 de julio de 1981"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-            style="width:100%;aspect-ratio:16/9;display:block;border:0;">
-          </iframe>
-          <div style="padding:10px 14px;font-size:11px;color:rgba(255,255,255,0.5);font-style:italic;">Acta de fundación de la Comisión Vecinal del Barrio Ameghino Sud · Córdoba, julio de 1981</div>
-        </div>
-
-        <!-- Los 5 problemas -->
-        <div style="margin-top:20px;">
-          <div style="font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--dorado);margin-bottom:12px;">Los 5 problemas que motivaron la reunión</div>
-          <div style="display:flex;flex-direction:column;gap:8px;">
-            <div style="display:flex;gap:12px;align-items:flex-start;font-size:13px;color:var(--gris-medio);line-height:1.5;">
-              <span style="font-weight:700;color:var(--dorado);flex-shrink:0;">1.</span>
-              <span><strong style="color:var(--gris-texto);">Desagüe de Av. Fuerza Aérea</strong> — Falta de desagüe adecuado generando inundaciones recurrentes.</span>
-            </div>
-            <div style="display:flex;gap:12px;align-items:flex-start;font-size:13px;color:var(--gris-medio);line-height:1.5;">
-              <span style="font-weight:700;color:var(--dorado);flex-shrink:0;">2.</span>
-              <span><strong style="color:var(--gris-texto);">Pozos ciegos y cloacas</strong> — Sin red cloacal, los pozos ciegos colapsaban y hundían los terrenos.</span>
-            </div>
-            <div style="display:flex;gap:12px;align-items:flex-start;font-size:13px;color:var(--gris-medio);line-height:1.5;">
-              <span style="font-weight:700;color:var(--dorado);flex-shrink:0;">3.</span>
-              <span><strong style="color:var(--gris-texto);">Hundimiento del terreno</strong> — La "doble conexión" subterránea generaba filtraciones severas.</span>
-            </div>
-            <div style="display:flex;gap:12px;align-items:flex-start;font-size:13px;color:var(--gris-medio);line-height:1.5;">
-              <span style="font-weight:700;color:var(--dorado);flex-shrink:0;">4.</span>
-              <span><strong style="color:var(--gris-texto);">Agua potable</strong> — Deficiencias en el suministro que afectaban a los residentes.</span>
-            </div>
-            <div style="display:flex;gap:12px;align-items:flex-start;font-size:13px;color:var(--gris-medio);line-height:1.5;">
-              <span style="font-weight:700;color:var(--dorado);flex-shrink:0;">5.</span>
-              <span><strong style="color:var(--gris-texto);">Escuela Provincial paralizada</strong> — Las obras estaban detenidas, incluyendo el sector secundario.</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Cita del acta -->
-        <div style="margin-top:20px;background:var(--azul-profundo);border-radius:4px;padding:20px 24px;">
-          <div style="font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--dorado);margin-bottom:8px;">Del acta original</div>
-          <p style="font-size:13px;color:rgba(255,255,255,0.8);font-style:italic;line-height:1.65;">"El Sr. Rigotti explicó al público la situación real del barrio, solicitándose el nombramiento de una Comisión o Subcomisión para encargarse de la prosecución del trámite legal necesario para la solución de los problemas."</p>
-          <div style="font-size:11px;color:rgba(255,255,255,0.4);margin-top:8px;">Acta de Reunión Informativa · 26 de julio de 1981</div>
-        </div>
-
-        <!-- Botón a página completa -->
-        <a href="/historia/reunion-fundacional-1981.html"
-           style="display:inline-flex;align-items:center;gap:8px;margin-top:20px;background:var(--azul-profundo);color:var(--blanco);padding:12px 20px;border-radius:999px;font-size:13px;font-weight:700;text-decoration:none;box-shadow:0 4px 12px -4px rgba(27,58,92,0.3);">
-          Leer la historia completa — con acta y delegados
-          <svg viewBox="0 0 24 24" style="width:14px;height:14px;fill:currentColor;"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
-        </a>
-
-        <!-- Botón al archivo de 45 años del reclamo cloacal -->
-        <a href="/historia/45-anos-reclamo-cloacal.html"
-           style="display:inline-flex;align-items:center;gap:8px;margin-top:12px;background:var(--dorado);color:var(--azul-oscuro);padding:12px 20px;border-radius:999px;font-size:13px;font-weight:700;text-decoration:none;box-shadow:0 4px 12px -4px rgba(232,160,32,0.35);">
-          Ver los 45 años del reclamo cloacal
-          <svg viewBox="0 0 24 24" style="width:14px;height:14px;fill:currentColor;"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
-        </a>
-
-      </div>
-      <div class="timeline-dot">
-        <div class="timeline-dot-circle">
-          <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path></svg>
-        </div>
-        <span class="timeline-year">1981</span>
-      </div>
-      <div class="timeline-empty"></div>
-    </div>
-
-    <!-- 1984 -->
-    <div class="timeline-item">
-      <div class="timeline-empty"></div>
-      <div class="timeline-dot">
-        <div class="timeline-dot-circle">
-          <svg viewBox="0 0 24 24"><path d="M12 3L1 9l4 2.18V15c0 3 2 5 7 5s7-2 7-5v-3.82L22 9 12 3zm6 10.72V15c0 1.58-1.19 3-5 3s-5-1.42-5-3v-1.28l5 2.72 5-2.72z"></path></svg>
-        </div>
-        <span class="timeline-year">1984</span>
-      </div>
-      <div class="timeline-content">
-        <div class="timeline-tag">Logro educativo</div>
-        <h3 class="timeline-titulo">Apertura del Bachillerato Técnico República Argentina</h3>
-        <p class="timeline-desc">Fruto de años de gestión vecinal, el barrio obtiene el Bachillerato Técnico República Argentina, que comienza a funcionar en marzo de 1984. Una victoria concreta de la organización comunitaria para garantizar educación secundaria en el barrio.</p>
-      </div>
-    </div>
-
-    <!-- 1988 -->
-    <div class="timeline-item">
-      <div class="timeline-empty"></div>
-      <div class="timeline-dot">
-        <div class="timeline-dot-circle">
-          <svg viewBox="0 0 24 24"><path d="M12 3l1.09 3.26L16 7.27l-2.91 2.84.69 4.01L12 12.4l-3.78 1.72.69-4.01L6 7.27l2.91-.01L12 3z"/></svg>
-        </div>
-        <span class="timeline-year">1988</span>
-      </div>
-      <div class="timeline-content">
-        <div class="timeline-tag">Comunidad</div>
-        <h3 class="timeline-titulo">Gran Peña Familiar en la Plaza del Barrio</h3>
-        <p class="timeline-desc">El 30 de diciembre de 1988, la Comisión Vecinal organizó una Gran Peña Familiar con entrada libre y gratuita en la Plaza del Barrio. Seis artistas, folklore, chamamé y humor. El programa de mano conservado es hoy un documento histórico único que muestra la vida del barrio, la comisión y sus gestiones en ese año.</p>
-        <a href="/historia/pena-familiar-1988.html"
-           style="display:inline-flex;align-items:center;gap:8px;margin-top:16px;background:var(--azul-profundo);color:var(--blanco);padding:10px 18px;border-radius:999px;font-size:13px;font-weight:700;text-decoration:none;box-shadow:0 4px 12px -4px rgba(27,58,92,0.3);">
-          Ver el archivo completo →
-        </a>
-      </div>
-    </div>
-
-    <!-- 1989 (mayo) -->
-    <div class="timeline-item">
-      <div class="timeline-empty"></div>
-      <div class="timeline-dot">
-        <div class="timeline-dot-circle">
-          <svg viewBox="0 0 24 24"><path d="M12 3L1 9l4 2.18V15c0 3 2 5 7 5s7-2 7-5v-3.82L22 9 12 3zm6 10.72V15c0 1.58-1.19 3-5 3s-5-1.42-5-3v-1.28l5 2.72 5-2.72z"></path></svg>
-        </div>
-        <span class="timeline-year">1989</span>
-      </div>
-      <div class="timeline-content">
-        <div class="timeline-tag">Logro educativo</div>
-        <h3 class="timeline-titulo">Edificio propio para el jardín de infantes República Argentina</h3>
-        <p class="timeline-desc">El 4 de mayo de 1989 se inauguró el edificio propio del prejardín y jardín de infantes República Argentina, en Ortiz esquina Uritorco. Obra de la Dirección Provincial de Arquitectura, gestionada junto a la cooperadora escolar y la Comisión Vecinal.</p>
-        <a href="/historia/jardin-infantes-1989.html"
-           style="display:inline-flex;align-items:center;gap:8px;margin-top:16px;background:var(--azul-profundo);color:var(--blanco);padding:10px 18px;border-radius:999px;font-size:13px;font-weight:700;text-decoration:none;box-shadow:0 4px 12px -4px rgba(27,58,92,0.3);">
-          Ver el archivo completo →
-        </a>
-      </div>
-    </div>
-
-    <!-- 1989 (noviembre) -->
-    <div class="timeline-item">
-      <div class="timeline-empty"></div>
-      <div class="timeline-dot">
-        <div class="timeline-dot-circle">
-          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm7.93 9h-2.95c-.11-1.7-.44-3.29-.98-4.7 1.98 1.08 3.44 2.98 3.93 4.7zM12 4.05c.83 1.15 1.51 2.86 1.9 4.95H10.1c.39-2.09 1.07-3.8 1.9-4.95zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2s.06 1.34.14 2H4.26zm.82 2h2.95c.11 1.7.44 3.29.98 4.7A7.987 7.987 0 0 1 5.08 16zm2.95-8H5.08a7.987 7.987 0 0 1 3.93-4.7c-.54 1.41-.87 3-.98 4.7zM12 19.95c-.83-1.15-1.51-2.86-1.9-4.95h3.8c-.39 2.09-1.07 3.8-1.9 4.95zM14.34 13H9.66c-.09-.66-.16-1.32-.16-2s.07-1.35.16-2h4.68c.09.65.16 1.32.16 2s-.07 1.34-.16 2zm.32 4.7c.54-1.41.87-3 .98-4.7h2.95a7.987 7.987 0 0 1-3.93 4.7zM16.36 14c.08-.66.14-1.32.14-2s-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"></path></svg>
-        </div>
-        <span class="timeline-year">1989</span>
-      </div>
-      <div class="timeline-content">
-        <div class="timeline-tag">Encuentro nacional</div>
-        <h3 class="timeline-titulo">Primer Encuentro Nacional de Casas de Gobierno Provinciales</h3>
-        <p class="timeline-desc">El 10 y 11 de noviembre de 1989, la Comisión Vecinal convocó en la Plaza del Barrio a las casas de gobierno de Catamarca, La Rioja y Jujuy junto con delegaciones de otras siete provincias, en el Día de la Tradición. El viernes superó las expectativas de público; el sábado debió suspenderse por lluvia. Meses de gestiones ante el gobernador, ministerios, sindicatos y comercios del barrio quedaron documentados en la correspondencia de la época.</p>
-        <a href="/historia/fiesta-tradicion-1989.html"
-           style="display:inline-flex;align-items:center;gap:8px;margin-top:16px;background:var(--azul-profundo);color:var(--blanco);padding:10px 18px;border-radius:999px;font-size:13px;font-weight:700;text-decoration:none;box-shadow:0 4px 12px -4px rgba(27,58,92,0.3);">
-          Ver el archivo completo →
-        </a>
-      </div>
-    </div>
-
-    <!-- 1990 -->
-    <div class="timeline-item">
-      <div class="timeline-empty"></div>
-      <div class="timeline-dot">
-        <div class="timeline-dot-circle">
-          <svg viewBox="0 0 24 24"><path d="M12 3L1 9l4 2.18V15c0 3 2 5 7 5s7-2 7-5v-3.82L22 9 12 3zm6 10.72V15c0 1.58-1.19 3-5 3s-5-1.42-5-3v-1.28l5 2.72 5-2.72z"></path></svg>
-        </div>
-        <span class="timeline-year">1990</span>
-      </div>
-      <div class="timeline-content">
-        <div class="timeline-tag">Logro educativo</div>
-        <h3 class="timeline-titulo">Tierras aprobadas para la escuela secundaria República Argentina</h3>
-        <p class="timeline-desc">En octubre de 1990, la Legislatura de Córdoba aprobó la expropiación de tres lotes de terreno para construir la escuela secundaria y bachillerato técnico especializado República Argentina, con obra prevista para 1991.</p>
-        <a href="/historia/escuela-secundaria-1990.html"
-           style="display:inline-flex;align-items:center;gap:8px;margin-top:16px;background:var(--azul-profundo);color:var(--blanco);padding:10px 18px;border-radius:999px;font-size:13px;font-weight:700;text-decoration:none;box-shadow:0 4px 12px -4px rgba(27,58,92,0.3);">
-          Ver el archivo completo →
-        </a>
-      </div>
-    </div>
-
-    <!-- 2009 -->
-    <div class="timeline-item">
-      <div class="timeline-empty"></div>
-      <div class="timeline-dot">
-        <div class="timeline-dot-circle">
-          <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"></path></svg>
-        </div>
-        <span class="timeline-year">2009</span>
-      </div>
-      <div class="timeline-content">
-        <div class="timeline-tag">Institucional</div>
-        <h3 class="timeline-titulo">Otorgamiento de Personería Jurídica Municipal</h3>
-        <p class="timeline-desc">El Decreto Municipal Nº 5782 otorga la Personería Jurídica Municipal al Centro Vecinal bajo el número 0120. El reconocimiento formal consolida décadas de organización vecinal.</p>
-      </div>
-    </div>
-
-    <!-- 2025 -->
-    <div class="timeline-item">
-      <div class="timeline-content">
-        <div class="timeline-tag">Presente</div>
-        <h3 class="timeline-titulo">Nueva Comisión Directiva reconocida — mandato 2025-2028</h3>
-        <p class="timeline-desc">La Resolución Nº 284 de septiembre de 2025 reconoce a la nueva Comisión Directiva con mandato por tres años. Se inicia un proceso de relanzamiento de la presencia institucional del Centro Vecinal en el barrio.</p>
-      </div>
-      <div class="timeline-dot">
-        <div class="timeline-dot-circle">
-          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path></svg>
-        </div>
-        <span class="timeline-year">2025</span>
-      </div>
-      <div class="timeline-empty"></div>
-    </div>
-
-    <!-- PENDIENTE: más hitos -->
-    <div class="timeline-item">
-      <div class="timeline-empty"></div>
-      <div class="timeline-dot">
-        <div class="timeline-dot-circle pendiente">
-          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg>
-        </div>
-        <span class="timeline-year pendiente">¿Vos sabés?</span>
-      </div>
-      <div class="timeline-content pendiente">
-        <div class="pendiente-badge">Pendiente</div>
-        <h3 class="timeline-titulo pendiente">Hitos entre 1964 y 2009 que esperan ser documentados</h3>
-        <p class="timeline-desc">¿Recordás algún evento importante del barrio? ¿Tenés fotos antiguas, documentos, o conocés a vecinos fundadores? Cada aporte suma a construir la historia colectiva de Ameghino Sur.</p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
 <!-- COMISIÓN 1981 -->
 <section class="fundadores-section">
   <div class="fundadores-inner">
@@ -824,5 +803,50 @@
     <a href="https://cvameghinosur.com.ar/">Volver al inicio</a>
   </div>
 </footer>
+
+<script>
+(function(){
+  var hechos=[].slice.call(document.querySelectorAll('.hecho'));
+  var huecos=[].slice.call(document.querySelectorAll('[data-hueco]'));
+  var epocas=[].slice.call(document.querySelectorAll('[data-epoca]'));
+  var botones=[].slice.call(document.querySelectorAll('.filtro'));
+  var sin=document.getElementById('sin-resultados');
+  var estado={tema:'',org:''};
+  function coincide(h,t,o){
+    var okT=!t||(h.getAttribute('data-temas')||'').split(' ').indexOf(t)>-1;
+    var okO=!o||h.getAttribute('data-org')===o;
+    return okT&&okO;
+  }
+  function contar(){
+    botones.forEach(function(b){
+      var g=b.getAttribute('data-grupo'), v=b.getAttribute('data-valor');
+      var t=g==='tema'?v:estado.tema, o=g==='org'?v:estado.org;
+      var n=hechos.filter(function(h){return coincide(h,t,o);}).length;
+      b.querySelector('.filtro-n').textContent=n;
+      b.disabled=(v!==''&&n===0);
+    });
+  }
+  function aplicar(){
+    var visibles=0, filtrando=!!(estado.tema||estado.org);
+    hechos.forEach(function(h){var ok=coincide(h,estado.tema,estado.org);h.hidden=!ok;if(ok)visibles++;});
+    huecos.forEach(function(x){x.hidden=filtrando;});
+    epocas.forEach(function(e){e.hidden=!e.querySelector('.hecho:not([hidden])');});
+    [].slice.call(document.querySelectorAll('.regla-pto')).forEach(function(a){var h=document.getElementById(a.getAttribute('data-ref'));a.classList.toggle('oculto',!!(h&&h.hidden));});
+    sin.hidden=visibles>0;
+    contar();
+  }
+  botones.forEach(function(b){
+    b.addEventListener('click',function(){
+      var g=b.getAttribute('data-grupo');
+      estado[g]=b.getAttribute('data-valor');
+      botones.forEach(function(x){
+        if(x.getAttribute('data-grupo')===g){var on=x===b;x.classList.toggle('activo',on);x.setAttribute('aria-pressed',on?'true':'false');}
+      });
+      aplicar();
+    });
+  });
+  aplicar();
+})();
+</script>
 </body>
 </html>
